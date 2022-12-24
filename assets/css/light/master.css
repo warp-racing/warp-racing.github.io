@@ -1,0 +1,8 @@
+@import url("../cookies.css");
+@import url("../index.css");
+@import url("../navbar.css");
+
+body {
+    color: black;
+    background-color: white;
+}

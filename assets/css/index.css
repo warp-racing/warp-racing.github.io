@@ -1,0 +1,252 @@
+/* Begin welcome div css */
+
+.welcome {
+    background-image: url("../img/slider/1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 1s ease;
+    position: relative;
+}
+
+.welcome .welcome-text {
+    color: white;
+    padding: 20px 20px 20px 20px;
+}
+
+.welcome .welcome-text h1 {
+    text-decoration: none;
+    font-size: 70px;
+}
+
+.welcome .welcome-text p {
+    font-size: 35px;
+}
+
+.welcome .dots {
+    position: absolute;
+    bottom: 0;
+}
+
+.welcome .dots .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px 5px 2px;
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+.welcome .dots .dot:hover {
+    background-color: #bababa;
+}
+
+.welcome .dots .selected-dot {
+    background-color: #bababa;
+}
+
+.welcome .dots .selected-dot:hover {
+    background-color: #a1a1a1;
+}
+
+/* End welcome div css */
+
+/* Start about-us div css */
+
+.about-us h2 {
+    font-size: 35px;
+    padding: 40px 25px 25px 25px;
+}
+
+.about-us p {
+    font-size: 20px;
+    padding: 0px 10% 25px 10%;
+}
+
+/* End about-us div css */
+
+/* Start meet-the-team div css */
+
+.meet-the-team h2 {
+    font-size: 40px;
+
+    padding: 20px 10px 10px 10px;
+}
+
+/* Begin card div css */
+
+.meet-the-team .card {
+    border-radius: 10px;
+    padding: 10px 10px;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 20px 10px 0px 10px;
+    max-width: 450px;
+}
+
+.meet-the-team .card h3 {
+    font-size: 40px;
+}
+
+.meet-the-team .card img {
+    border-radius: 50%;
+    height: auto;
+    width: 40%;
+    padding: 10px 0px 10px 0px;
+}
+
+.meet-the-team .card p {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.meet-the-team .card #role {
+    color: #474ba5;
+    font-size: 25px;
+}
+
+/* End card div css */
+
+/* End meet-the-team div css */
+
+/* Start about-f1-in-schools div css */
+
+.about-f1-in-schools h2 {
+    font-size: 35px;
+    padding: 40px 25px 25px 25px;
+}
+
+.about-f1-in-schools img {
+    content: url("../img/f1-in-schools/f1-in-schools-black.webp");
+    max-width: 250px;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.about-f1-in-schools p {
+    font-size: 20px;
+    padding: 0px 10% 25px 10%;
+}
+
+.about-f1-in-schools .learn-more {
+    background-color: #9195ff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px 15px 10px 15px;
+    transition: background-color 1s ease;
+}
+
+.about-f1-in-schools .learn-more:hover {
+    background-color: #474ba5;
+}
+
+/* End about-f1-in-schools div css */
+
+/* Start our-cars div css */
+
+.our-cars h2 {
+    font-size: 35px;
+    padding: 40px 25px 25px 25px;
+}
+
+.our-cars .car-banner {
+    background-color: #9195ff;
+    padding: 10px 0px 10px 20px;
+}
+
+.our-cars .car-banner h3 {
+    display: table;
+    font-size: 35px;
+    text-align: left;
+}
+
+.our-cars .car {
+    display: flex;
+}
+
+.our-cars .car .car-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    clip-path: inset(0px -15px 0px 0px);
+    display: absolute;
+    float: left;
+    width: 50%;
+}
+
+.our-cars .car .car-about {
+    display: absolute;
+    float: right;
+    padding: 25px;
+    height: auto;
+    width: 50%;
+}
+
+.our-cars .car .car-about p {
+    font-size: 17.5px;
+    padding: 100px 0px 100px 0px;
+}
+
+@media only screen and (max-width: 1150px) {
+    .our-cars .car-banner {
+        padding-left: 0px;
+    }
+
+    .our-cars .car-banner h3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .our-cars .car {
+        display: inline;
+    }
+
+    .our-cars .car .car-image {
+        display: block;
+        float: none;
+        min-height: 250px;
+        width: 100%;
+    }
+
+    .our-cars .car .car-about {
+        display: block;
+        float: none;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .our-cars .car .car-about {
+        padding: 25px 10px 25px 10px;
+    }
+
+    .our-cars .car .car-about p {
+        padding: 10px 0px 10px 0px;
+    }
+}
+
+/* End our-cars div css */
+
+/* Start gallery div css */
+
+.gallery h2 {
+    font-size: 35px;
+    padding: 40px 25px 25px 25px;
+}
+
+.gallery p {
+    font-size: 20px;
+    padding: 0px 10% 25px 10%;
+}
+
+/* End gallery div css*/

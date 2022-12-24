@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Home page for the WΔRP">
+    <meta name="keywords" content="WΔRP">
+    <title>WΔRP | Home</title>
+    <link rel="icon" type="image/x-webp" href="assets/img/logo.webp">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/cookies.css" rel="stylesheet">
+    <link href="assets/css/global.css" rel="stylesheet">
+    <link href="assets/css/index.css" rel="stylesheet">
+    <link href="assets/css/navbar.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <script defer src="assets/js/global.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <img id="logo" src="assets/img/logo.webp" alt="Logo">
+        <p id="name">
+            <b>WΔRP</b>
+        </p>
+
+        <div class="items">
+            <ul>
+                <li>
+                    <p onclick="scrollToElement('welcome');" id="welcome">
+                        Welcome
+                    </p>
+                </li>
+                <li>
+                    <p onclick="scrollToElement('about-us');" id="about-us">
+                        About Us
+                    </p>
+                </li>
+                <li>
+                    <p onclick="scrollToElement('meet-the-team');"
+                        id="meet-the-team">
+                        Meet The Team
+                    </p>
+                </li>
+                <li>
+                    <p onclick="scrollToElement('our-cars')"
+                        id="our-cars">
+                        Our Cars
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <i id="theme-toggle" class="fa fa-moon-o"></i>
+    </nav>
+    <div class="welcome">
+        <div class="welcome-text">
+            <h1>WΔRP</h1>
+            <br>
+            <br>
+            <p>Never Settle</p>
+        </div>
+
+        <div class="dots">
+            <span class="dot selected-dot" id="dot-1" onclick="updateSlideTo(1);"></span>
+            <span class="dot" id="dot-2" onclick="updateSlideTo(2);"></span>
+        </div>
+    </div>
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>
+            WΔRP is a team of five 13-14 year-old boys from Saint Olave's Grammar
+            School, who are competing in the F1 in Schools competition as an entry
+            class team. We are a team of leaders, innovators, and designers who are
+            ready to compete in this year's competition. We love STEM based
+            activities, since we believe they provide valuable, real-life experience
+            through hands-on-learning.
+        </p>
+    </div>
+    <div class="meet-the-team">
+        <h2>Meet The Team</h2>
+
+        <div class="card">
+            <img src="assets/img/abhinav-malladi.webp" alt="Abhinav Mallidi Image">
+            <h3>Abhinav Mallidi</h3>
+            <h3 id="role">Team Manager / Engineer</h3>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo
+                id elit ultrices placerat. Nunc luctus felis a magna vehicula, sit
+                amet suscipit massa laoreet. Vivamus risus augue, vulputate in mattis
+                id, facilisis vel sem. Curabitur eleifend convallis sem, vitae mattis
+                leo laoreet eu. Sed porta augue eu tristique finibus. Mauris ac
+                efficitur lectus, eu elementum neque.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/ashvin-aravindan.webp" alt="Ashvin Aravindan Image">
+            <h3>Ashvin Aravindan</h3>
+            <h3 id="role">Portfolio</h3>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo
+                id elit ultrices placerat. Nunc luctus felis a magna vehicula, sit
+                amet suscipit massa laoreet. Vivamus risus augue, vulputate in mattis
+                id, facilisis vel sem. Curabitur eleifend convallis sem, vitae mattis
+                leo laoreet eu. Sed porta augue eu tristique finibus. Mauris ac
+                efficitur lectus, eu elementum neque.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/aneeq-weerasinghe.webp" alt="Aneeq Weerasinghe Image">
+            <h3>Aneeq Weerasinghe</h3>
+            <h3 id="role">Team Identity / Music / Website</h3>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo
+                id elit ultrices placerat. Nunc luctus felis a magna vehicula, sit
+                amet suscipit massa laoreet. Vivamus risus augue, vulputate in mattis
+                id, facilisis vel sem. Curabitur eleifend convallis sem, vitae mattis
+                leo laoreet eu. Sed porta augue eu tristique finibus. Mauris ac
+                efficitur lectus, eu elementum neque.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/dennis-ellimoottil.webp" alt="Dennis Ellimoottil Image">
+            <h3>Dennis Ellimoottil</h3>
+            <h3 id="role">Portfolio / Finance / Speech</h3>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo
+                id elit ultrices placerat. Nunc luctus felis a magna vehicula, sit
+                amet suscipit massa laoreet. Vivamus risus augue, vulputate in mattis
+                id, facilisis vel sem. Curabitur eleifend convallis sem, vitae mattis
+                leo laoreet eu. Sed porta augue eu tristique finibus. Mauris ac
+                efficitur lectus, eu elementum neque.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/neal-ye.webp" alt="Neal Ye Image">
+            <h3>Neal Ye</h3>
+            <h3 id="role">3D Modeller / Engineer</h3>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo
+                id elit ultrices placerat. Nunc luctus felis a magna vehicula, sit
+                amet suscipit massa laoreet. Vivamus risus augue, vulputate in mattis
+                id, facilisis vel sem. Curabitur eleifend convallis sem, vitae mattis
+                leo laoreet eu. Sed porta augue eu tristique finibus. Mauris ac
+                efficitur lectus, eu elementum neque.
+            </p>
+        </div>
+    </div>
+    <div class="about-f1-in-schools">
+        <h2>F1 in Schools</h2>
+        <img alt="F1 in Schools Logo" id="f1-in-schools-logo">
+        <p>The F1 in Schools challenge is a STEM based, team challenge, targeted at all students between the ages of 9 and 19. The event provides the participating teams with the opportunity to use CAD / CAM software to design, analyse, manafacture, test, and eventually race minituare compressed air powered cars. The cars are raced on a 20m track, and the teams are not only judged by the speed of their car, but also on their portfolios, marketing, verbal presentations, pit display, and more.</p>
+
+        <a href="https://www.f1inschools.co.uk/" target="_blank"><button class="learn-more">Learn More</button></a>
+    </div>
+    <div class="our-cars">
+        <h2>Our Cars</h2>
+
+        <div class="car-banner">
+            <h3>Entry Class Car</h3>
+        </div>
+
+        <div class="car">
+            <div class="car-image" style="background-image: url('assets/img/cars/entry-class-car/1.webp');"></div>
+
+            <div class="car-about">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo id elit ultrices placerat. Nunc luctus felis a magna vehicula, sit amet suscipit massa laoreet. Vivamus risus augue, vulputate in mattis id, facilisis vel sem. Curabitur eleifend convallis sem, vitae mattis leo laoreet eu. Sed porta augue eu tristique finibus. Mauris ac efficitur lectus, eu elementum neque.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p id="copyright">©WΔRP 2022 - Present. All rights reserved.</p>
+
+        <ul>
+            <li>
+                <a href="" target="_blank"><img alt="Youtube" src="assets/img/social/youtube.webp"></a>
+            </li>
+
+
+            <li>
+                <a href="" target="_blank"><img alt="Facebook" src="assets/img/social/facebook.webp"></a>
+            </li>
+
+
+            <li>
+                <a href="" target="_blank"><img alt="Twitter" src="assets/img/social/twitter.webp"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="cookie-consent-banner">
+        <div class="cookie-consent-banner__inner">
+            <div class="cookie-consent-banner__copy">
+                <div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES &#127850;</div>
+                <div class="cookie-consent-banner__description">We use cookies to analyse traffic to our site. The
+                    services we use for analytics may combine it with other information that you've provided to them, or
+                    that they've collected from your use of their services. You can accept or deny the use of analytics
+                    cookies on
+                    our website below. Functional cookies, like those for remembering the site theme, cannot be
+                    disabled.
+                </div>
+
+                <div class="cookie-consent-banner__actions">
+                    <a href="#" class="cookie-consent-banner__cta">OK</a>
+                    <a href="#" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">Decline</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
