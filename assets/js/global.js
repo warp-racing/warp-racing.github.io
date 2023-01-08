@@ -37,10 +37,10 @@ function updateNavbar(activeElement) {
 
 function updateTheme() {
     if (getCookie("theme") in ["light", "dark"]) {
+        var darkTheme = getCookie("theme") == "dark";
+    } else {
         var darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         setCookie("theme", darkTheme ? "dark" : "light", 365);
-    } else {
-        var darkTheme = getCookie("theme") == "dark";
     }
 
     var css = document.head.appendChild(document.createElement("link"));
