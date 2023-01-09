@@ -38,7 +38,7 @@ function updateNavbar(activeElement) {
 function updateTheme() {
     var darkTheme;
 
-    if (getCookie("theme") in ["light", "dark"]) {
+    if (["light", "dark"].includes(getCookie("theme"))) {
         darkTheme = getCookie("theme") == "dark";
     } else {
         darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
