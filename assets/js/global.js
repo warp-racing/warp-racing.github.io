@@ -36,10 +36,12 @@ function updateNavbar(activeElement) {
 }
 
 function updateTheme() {
+    var darkTheme;
+
     if (getCookie("theme") in ["light", "dark"]) {
-        const darkTheme = getCookie("theme") == "dark";
+        darkTheme = getCookie("theme") == "dark";
     } else {
-        const darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         setCookie("theme", darkTheme ? "dark" : "light", 365);
     }
 
