@@ -26,7 +26,7 @@ const deleteCookie = (name,) => {
 function updateNavbar(activeElement) {
     var navbarItems = ["welcome", "about-us", "meet-the-team", "our-cars"];
 
-    for (var i = 0; i < navbarItems.length; i++) {
+    for (let i = 0; i < navbarItems.length; i++) {
         if (navbarItems[i] == activeElement) {
             document.getElementById(navbarItems[i]).className = "active";
         } else {
@@ -37,14 +37,14 @@ function updateNavbar(activeElement) {
 
 function updateTheme() {
     if (getCookie("theme") in ["light", "dark"]) {
-        var darkTheme = getCookie("theme") == "dark";
+        const darkTheme = getCookie("theme") == "dark";
     } else {
-        var darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         setCookie("theme", darkTheme ? "dark" : "light", 365);
     }
 
-    var css = document.head.appendChild(document.createElement("link"));
-    var themeToggle = document.getElementById("theme-toggle");
+    const css = document.head.appendChild(document.createElement("link"));
+    const themeToggle = document.getElementById("theme-toggle");
 
     if (darkTheme) {
         css.href = "assets/css/dark/master.css";
@@ -68,7 +68,7 @@ function updateSlide() {
 
     document.getElementsByClassName("welcome")[0].style["background-image"] = `url(assets/img/slider/${slide}.webp)`;
 
-    for (i = 1; i <= amountOfSlides; i++) {
+    for (let i = 1; i <= amountOfSlides; i++) {
         var dot = document.getElementById(`dot-${i}`);
 
         if (i == slide) {
@@ -82,12 +82,11 @@ function updateSlide() {
 }
 
 function scrollToElement(element) {
-    console.log(document.getElementsByClassName(element)[0].scrollY);
     window.scrollTo(window.scrollX, document.getElementsByClassName(element)[0].getBoundingClientRect().top + window.scrollY - (Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth) < 750 ? 0 : navbarHeight));
 }
 
-function updateSlideTo(slide) {
-    window.slide = slide - 1;
+function updateSlideTo(newSlide) {
+    slide = newSlide - 1;
     clearTimeout(timeout);
     updateSlide();
 }
@@ -95,7 +94,7 @@ function updateSlideTo(slide) {
 updateSlide();
 
 window.onscroll = function () {
-    var navbar = document.getElementsByClassName("navbar")[0];
+    const navbar = document.getElementsByClassName("navbar")[0];
 
     if (Math.max(
         document.body.scrollWidth,
@@ -114,8 +113,8 @@ window.onscroll = function () {
         navbar.style["z-index"] = "auto";
     }
 
-    var meet_the_team = document.getElementsByClassName("meet-the-team")[0].offsetTop - navbarHeight;
-    var about_us = document.getElementsByClassName("about-us")[0].offsetTop - navbarHeight;
+    const meet_the_team = document.getElementsByClassName("meet-the-team")[0].offsetTop - navbarHeight;
+    const about_us = document.getElementsByClassName("about-us")[0].offsetTop - navbarHeight;
 
     if (window.scrollY >= meet_the_team) {
         updateNavbar("meet-the-team");
@@ -133,7 +132,7 @@ window.onload = function () {
 
     document.getElementById("copyright").innerHTML = `©WΔRP 2022 - ${new Date().getFullYear()}. All rights reserved.`;
 
-    var cookieConsent = getCookie("cookieConsent");
+    const cookieConsent = getCookie("cookieConsent");
 
     if (cookieConsent != "true" && cookieConsent != "false") {
         document.getElementsByClassName("cookie-consent-banner")[0].style.display = "block";
