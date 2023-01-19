@@ -1,4 +1,4 @@
-var amountOfSlides = 2;
+var amountOfSlides = 4;
 var slide = 0;
 var timeout;
 var navbarHeight = document.getElementsByClassName("navbar")[0].offsetHeight;
