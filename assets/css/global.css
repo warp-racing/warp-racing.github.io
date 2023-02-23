@@ -1,50 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
-@keyframes fadeInAnimation {
+@keyframes a {
     0% {
-        opacity: 0;
+        opacity: 0
     }
 
-    100% {
-        opacity: 1;
+    to {
+        opacity: 1
     }
 }
 
 * {
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
+    animation: a 1s ease;
     animation-fill-mode: forwards;
+    animation-iteration-count: 1;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Open Sans, sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    text-align: center;
+    text-align: center
 }
 
 body {
-    color: black;
-    background-color: white;
+    background-color: #fff;
+    color: #000
 }
 
 ::-webkit-scrollbar {
-    max-width: 10px;
+    max-width: 10px
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, .1);
+    border-radius: 10px
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, .2);
+    border-radius: 10px
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, .3)
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, .4)
 }

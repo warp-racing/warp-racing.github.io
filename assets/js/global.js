@@ -2,6 +2,7 @@ var amountOfSlides = 4;
 var slide = 0;
 var timeout;
 var navbarHeight = document.getElementsByClassName("navbar")[0].offsetHeight;
+var entryClassSlide = 0;
 
 const setCookie = (name, value, days = 7) => {
     const expires = new Date(Date.now() + days * 864e5).toUTCString()
@@ -93,6 +94,16 @@ function updateSlideTo(newSlide) {
     updateSlide();
 }
 
+function entryClassSlider() {
+    if (entryClassSlide++ == 3) {
+        entryClassSlide = 1;
+    }
+
+    document.getElementById("entry-class-car-image").style["background-image"] = `url(assets/img/cars/entry-class-car/${entryClassSlide}.png)`;
+
+    setTimeout(entryClassSlider, 5000);
+}
+
 updateSlide();
 
 window.onscroll = function () {
@@ -141,6 +152,8 @@ window.onload = function () {
     }
 
     window.onscroll();
+
+    entryClassSlider();
 }
 
 document.getElementsByClassName("cookie-consent-banner__cta")[0]

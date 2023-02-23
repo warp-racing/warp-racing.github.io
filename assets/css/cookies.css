@@ -1,101 +1,91 @@
 .cookie-consent-banner {
-	background-color: white;
-	position: fixed;
+	background-color: #fff;
 	bottom: 0;
-	left: 0;
-	z-index: 1;
 	box-sizing: border-box;
-	width: 100%;
-
 	display: none;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 1
 }
 
 .cookie-consent-banner__inner {
-	max-width: 960px;
 	margin: 0 auto;
-	padding-top: 32px;
+	max-width: 960px;
+	padding-top: 32px
 }
 
 .cookie-consent-banner__copy {
-	margin-bottom: 16px;
+	margin-bottom: 16px
 }
 
 .cookie-consent-banner__header {
-	margin-bottom: 8px;
-
-	font-weight: normal;
 	font-size: 20px;
+	margin-bottom: 8px
+}
+
+.cookie-consent-banner__description,
+.cookie-consent-banner__header {
+	font-weight: 400;
 	line-height: 24px;
 	padding-left: 10px;
-	padding-right: 10px;
+	padding-right: 10px
 }
 
 .cookie-consent-banner__description {
-	font-weight: normal;
-	color: #838F93;
-	font-size: 18px;
-	line-height: 24px;
-	padding-left: 10px;
-	padding-right: 10px;
+	color: #838f93;
+	font-size: 18px
 }
 
 .cookie-consent-banner__description a:-webkit-any-link {
 	color: -webkit-link;
 	cursor: pointer;
-	text-decoration: underline;
+	text-decoration: underline
 }
 
 .cookie-consent-banner__actions {
-	padding-top: 25px;
+	padding-top: 25px
 }
 
 .cookie-consent-banner__cta {
+	background-color: #2ce080;
+	border-radius: 2px;
 	box-sizing: border-box;
+	color: #fff;
 	display: inline-block;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
 	min-width: 164px;
 	padding: 11px 13px;
-
-	border-radius: 2px;
-
-	background-color: #2CE080;
-
-	color: #FFF;
-	text-decoration: none;
 	text-align: center;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 20px;
+	text-decoration: none
 }
 
 .cookie-consent-banner__cta--secondary {
-	padding: 9px 13px;
-
-	border: 2px solid #3A4649;
-
 	background-color: transparent;
-
-	color: #2CE080;
+	border: 2px solid #3a4649;
+	color: #2ce080;
+	padding: 9px 13px
 }
 
 .cookie-consent-banner__cta:hover {
-	background-color: #20BA68;
+	background-color: #20ba68
 }
 
 .cookie-consent-banner__cta--secondary:hover {
-	border-color: #838F93;
-
 	background-color: transparent;
-
-	color: #22C870;
+	border-color: #838f93;
+	color: #22c870
 }
 
 .cookie-consent-banner__cta:last-child {
-	margin-left: 16px;
+	margin-left: 16px
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width:400px) {
 	.cookie-consent-banner__cta:last-child {
-		margin-left: 0px;
-		margin-top: 10px;
+		margin-left: 0;
+		margin-top: 10px
 	}
 }
