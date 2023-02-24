@@ -51,6 +51,12 @@
     background-color: #a1a1a1
 }
 
+@media only screen and (max-width: 750px) {
+    .welcome {
+        height: 300px;
+    }
+}
+
 .about-us h2 {
     font-size: 35px;
     padding: 40px 25px 25px
