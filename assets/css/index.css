@@ -7,7 +7,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
     display: flex;
     justify-content: center;
-    min-height: 600px;
+    height: 100vh;
     position: relative;
     transition: background-image 1s ease-in
 }
