@@ -149,6 +149,8 @@ window.onload = function () {
 
     if (cookieConsent != "true" && cookieConsent != "false") {
         document.getElementsByClassName("cookie-consent-banner")[0].style.display = "block";
+    } else if (cookieConsent == "true") {
+        document.body.innerHTML += `<script async src="//static.getclicky.com/101399311.js"></script><noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101399311ns.gif" /></p></noscript>`;
     }
 
     window.onscroll();
