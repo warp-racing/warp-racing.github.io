@@ -152,7 +152,8 @@ window.onresize = window.onscroll;
 window.onload = function () {
     updateTheme();
 
-    document.getElementById("copyright").innerHTML = `©<a href="https://github.com/skifli">skifli</a> 2022 - ${new Date().getFullYear()}. All rights reserved.`;
+    let copyright = document.getElementById("copyright");
+    copyright.innerHTML = copyright.innerHTML.replace("{current_year}", new Date().getFullYear());
 
     const cookieConsent = getCookie("cookieConsent");
 
