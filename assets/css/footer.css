@@ -6,6 +6,11 @@
     padding: 10px 20px
 }
 
+.footer a {
+    color: #474ba5;
+    text-decoration: underline;
+}
+
 .footer #copyright {
     font-size: 20px
 }
