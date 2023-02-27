@@ -25,7 +25,7 @@ const deleteCookie = (name,) => {
 }
 
 function updateNavbar(activeElement) {
-    var navbarItems = ["welcome", "about-us", "meet-the-team", "our-cars"];
+    var navbarItems = ["welcome", "about-us", "meet-the-team", "our-cars", "portfolios"];
 
     for (let i = 0; i < navbarItems.length; i++) {
         if (navbarItems[i] == activeElement) {
@@ -131,12 +131,18 @@ window.onscroll = function () {
 
     const meet_the_team = document.getElementsByClassName("meet-the-team")[0].offsetTop - navbarHeight;
     const about_us = document.getElementsByClassName("about-us")[0].offsetTop - navbarHeight;
+    const our_cars = document.getElementsByClassName("our-cars")[0].offsetTop - navbarHeight;
+    const portfolios = document.getElementsByClassName("portfolios")[0].offsetTop - navbarHeight;
 
-    if (window.scrollY >= meet_the_team) {
+    if (window.scrollY >= portfolios) {
+        updateNavbar("portfolios");
+    } else if (window.scrollY >= our_cars) {
+        updateNavbar("our-cars");
+    } else if (window.scrollY >= meet_the_team) {
         updateNavbar("meet-the-team");
     } else if (window.scrollY >= about_us) {
         updateNavbar("about-us");
-    } else {
+    }else {
         updateNavbar("welcome");
     }
 }
