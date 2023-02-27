@@ -40,28 +40,31 @@ function updateTheme() {
     var darkTheme;
 
     if (["light", "dark"].includes(getCookie("theme"))) {
-        darkTheme = getCookie("theme") == "dark";
+        darkTheme = (getCookie("theme") == "dark");
     } else {
         darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         setCookie("theme", darkTheme ? "dark" : "light", 365);
     }
 
-    const css = document.head.appendChild(document.createElement("link"));
-    const themeToggle = document.getElementById("theme-toggle");
+    var css = document.createElement("link");
+    css.rel = "stylesheet";
 
     if (darkTheme) {
         css.href = "assets/css/dark/master.css";
 
-        themeToggle.className = "fa fa-sun-o";
-        themeToggle.onclick = function () { setCookie("theme", "light", 365); updateTheme(); };
+        document.getElementById("theme-toggle").className = "fa fa-sun-o";
     } else {
         css.href = "assets/css/light/master.css";
 
-        themeToggle.className = "fa fa-moon-o";
-        themeToggle.onclick = function () { setCookie("theme", "dark", 365); updateTheme(); };
+        document.getElementById("theme-toggle").className = "fa fa-moon-o";
     }
 
-    css.rel = "stylesheet";
+    document.head.appendChild(css);
+}
+
+function changeTheme() {
+    setCookie("theme", getCookie("theme") == "dark" ? "light" : "dark", 365);
+    updateTheme();
 }
 
 function updateSlide() {
@@ -143,7 +146,7 @@ window.onresize = window.onscroll;
 window.onload = function () {
     updateTheme();
 
-    document.getElementById("copyright").innerHTML = `©WΔRP 2022 - ${new Date().getFullYear()}. All rights reserved.`;
+    document.getElementById("copyright").innerHTML = `©<a href="https://github.com/skifli">skifli</a> 2022 - ${new Date().getFullYear()}. All rights reserved.`;
 
     const cookieConsent = getCookie("cookieConsent");
 
