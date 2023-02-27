@@ -6,8 +6,8 @@
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
     display: flex;
-    justify-content: center;
     height: 100vh;
+    justify-content: center;
     position: relative;
     transition: background-image 1s ease-in
 }
@@ -51,9 +51,9 @@
     background-color: #a1a1a1
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width:750px) {
     .welcome {
-        height: 300px;
+        height: 300px
     }
 }
 
@@ -202,8 +202,7 @@
     .our-cars .car .car-about {
         display: block;
         float: none;
-        padding: 0;
-        padding: 25px 10px;
+        padding: 25px 10px 2.5px;
         width: 100%
     }
 
