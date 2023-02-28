@@ -1,4 +1,4 @@
-.welcome {
+#welcome {
     align-items: center;
     background-image: url(../img/slider/1.webp);
     background-position: 50%;
@@ -9,29 +9,30 @@
     height: 100vh;
     justify-content: center;
     position: relative;
-    transition: background-image 1s ease-in
+    transition: background-image 1s ease-in;
 }
 
-.welcome .welcome-text {
+#welcome #welcome-text {
     color: #fff;
     padding: 20px
 }
 
-.welcome .welcome-text h1 {
+#welcome #welcome-text h1 {
     font-size: 70px;
+    font-weight: 600;
     text-decoration: none
 }
 
-.welcome .welcome-text p {
+#welcome #welcome-text p {
     font-size: 35px
 }
 
-.welcome .dots {
+#welcome .dots {
     bottom: 0;
     position: absolute
 }
 
-.welcome .dots .dot {
+#welcome .dots .dot {
     background-color: #d4d4d4;
     border-radius: 50%;
     cursor: pointer;
@@ -42,84 +43,86 @@
     width: 15px
 }
 
-.welcome .dots .dot:hover,
-.welcome .dots .selected-dot {
+#welcome .dots .dot:hover,
+#welcome .dots .selected-dot {
     background-color: #bababa
 }
 
-.welcome .dots .selected-dot:hover {
+#welcome .dots .selected-dot:hover {
     background-color: #a1a1a1
 }
 
-@media only screen and (max-width:750px) {
-    .welcome {
-        height: 300px
+@media only screen and (max-width:900px) {
+    #welcome {
+        height: 300px;
     }
 }
 
-.about-us h2 {
+#about-us h2 {
     font-size: 35px;
     padding: 40px 25px 25px
 }
 
-.about-us p {
+#about-us p {
     font-size: 20px;
     padding: 0 10% 25px
 }
 
-.meet-the-team h2 {
+#meet-the-team h2 {
     font-size: 40px;
     padding: 20px 10px 10px
 }
 
-.meet-the-team .card {
+#meet-the-team .card {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
     display: inline-block;
-    margin: 20px 10px 25px 0px;
+    margin: 20px 10px 25px 0;
     max-width: 450px;
     padding: 10px
 }
 
-.meet-the-team .card h3 {
-    font-size: 40px
+#meet-the-team .card h3 {
+    font-size: 40px;
+    font-weight: 400
 }
 
-.meet-the-team .card img {
+#meet-the-team .card img {
     border-radius: 50%;
     height: auto;
     padding: 10px 0;
     width: 40%
 }
 
-.meet-the-team .card p {
+#meet-the-team .card p {
     font-size: 20px;
     padding-bottom: 10px
 }
 
-.meet-the-team .card #role {
+#meet-the-team .card h4 {
     color: #474ba5;
-    font-size: 25px
+    font-size: 25px;
+    font-weight: 300
 }
 
-.about-f1-in-schools h2 {
+#about-f1-in-schools h2 {
     font-size: 35px;
     padding: 40px 25px 25px
 }
 
-.about-f1-in-schools img {
+#about-f1-in-schools img {
     content: url(../img/f1-in-schools/f1-in-schools-black.webp);
     height: auto;
     max-width: 250px;
     padding-bottom: 20px
 }
 
-.about-f1-in-schools p {
+#about-f1-in-schools p {
     font-size: 20px;
     padding: 0 10% 25px
 }
 
-.about-f1-in-schools .learn-more {
+#about-f1-in-schools #learn-more {
     background-color: #9195ff;
     border: none;
     border-radius: 10px;
@@ -127,34 +130,34 @@
     cursor: pointer;
     font-size: 25px;
     padding: 10px 15px;
-    transition: background-color 1s ease-in
+    transition: background-color 0.25s ease-in
 }
 
-.about-f1-in-schools .learn-more:hover {
+#about-f1-in-schools #learn-more:hover {
     background-color: #474ba5
 }
 
-.our-cars h2 {
+#our-cars h2 {
     font-size: 35px;
     padding: 40px 25px 25px
 }
 
-.our-cars .car-banner {
+#our-cars .car-banner {
     background-color: #9195ff;
     padding: 10px 0 10px 20px
 }
 
-.our-cars .car-banner h3 {
+#our-cars .car-banner h3 {
     display: table;
     font-size: 35px;
     text-align: left
 }
 
-.our-cars .car {
+#our-cars .car {
     display: flex
 }
 
-.our-cars .car .car-image {
+#our-cars .car .car-image {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -165,7 +168,7 @@
     width: 50%
 }
 
-.our-cars .car .car-about {
+#our-cars .car .car-about {
     display: absolute;
     float: right;
     height: auto;
@@ -173,60 +176,60 @@
     width: 50%
 }
 
-.our-cars .car .car-about p {
+#our-cars .car .car-about p {
     font-size: 17.5px;
     padding: 100px 0
 }
 
 @media only screen and (max-width:1150px) {
-    .our-cars .car-banner {
+    #our-cars .car-banner {
         padding-left: 0
     }
 
-    .our-cars .car-banner h3 {
+    #our-cars .car-banner h3 {
         text-align: center;
         width: 100%
     }
 
-    .our-cars .car {
+    #our-cars .car {
         display: inline
     }
 
-    .our-cars .car .car-image {
+    #our-cars .car .car-image {
         display: block;
         float: none;
         min-height: 250px;
         width: 100%
     }
 
-    .our-cars .car .car-about {
+    #our-cars .car .car-about {
         display: block;
         float: none;
         padding: 25px 10px 2.5px;
         width: 100%
     }
 
-    .our-cars .car .car-about p {
+    #our-cars .car .car-about p {
         padding: 10px 0
     }
 }
 
-.gallery h2 {
+#gallery h2 {
     font-size: 35px;
     padding: 40px 25px 25px
 }
 
-.gallery p {
+#gallery p {
     font-size: 20px;
     padding: 0 10% 25px
 }
 
-.portfolios h2 {
+#portfolios h2 {
     font-size: 35px;
     padding: 40px 25px 25px
 }
 
-.portfolios p {
+#portfolios p {
     font-size: 20px;
     padding: 0 10% 25px
 }

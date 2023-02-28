@@ -1,4 +1,4 @@
-.footer {
+#footer {
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
     display: flex;
@@ -6,35 +6,35 @@
     padding: 10px 20px
 }
 
-.footer #copyright {
+#footer #copyright {
     font-size: 20px
 }
 
-.footer ul {
+#footer ul {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0
 }
 
-.footer ul li {
+#footer ul li {
     padding-left: 20px
 }
 
-@media only screen and (max-width:750px) {
-    .footer {
+@media only screen and (max-width:900px) {
+    #footer {
         flex-direction: column
     }
 
-    .footer #copyright {
+    #footer #copyright {
         padding: 10px 0
     }
 
-    .footer ul {
+    #footer ul {
         flex-direction: column
     }
 
-    .footer ul li {
+    #footer ul li {
         padding: 5px 0 0
     }
 }

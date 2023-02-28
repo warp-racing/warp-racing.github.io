@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600&display=swap');
 
 @keyframes a {
     0% {
@@ -15,7 +15,8 @@
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     box-sizing: border-box;
-    font-family: Open Sans, sans-serif;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 200;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -51,5 +52,5 @@ body {
 
 a {
     color: #474ba5;
-    text-decoration: underline;
+    text-decoration: underline
 }
