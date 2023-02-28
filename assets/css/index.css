@@ -60,6 +60,7 @@
 
 #about-us h2 {
     font-size: 35px;
+    font-weight: 400;
     padding: 40px 25px 25px
 }
 
@@ -69,7 +70,8 @@
 }
 
 #meet-the-team h2 {
-    font-size: 40px;
+    font-size: 35px;
+    font-weight: 400;
     padding: 20px 10px 10px
 }
 
@@ -83,7 +85,7 @@
 }
 
 #meet-the-team .card h3 {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 400
 }
 
@@ -107,6 +109,7 @@
 
 #about-f1-in-schools h2 {
     font-size: 35px;
+    font-weight: 400;
     padding: 40px 25px 25px
 }
 
@@ -139,6 +142,7 @@
 
 #our-cars h2 {
     font-size: 35px;
+    font-weight: 400;
     padding: 40px 25px 25px
 }
 
@@ -216,6 +220,7 @@
 
 #gallery h2 {
     font-size: 35px;
+    font-weight: 400;
     padding: 40px 25px 25px
 }
 
@@ -226,6 +231,7 @@
 
 #portfolios h2 {
     font-size: 35px;
+    font-weight: 400;
     padding: 40px 25px 25px
 }
 
