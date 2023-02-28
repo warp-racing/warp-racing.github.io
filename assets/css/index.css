@@ -76,7 +76,7 @@
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
     display: inline-block;
-    margin: 20px 10px 0;
+    margin: 20px 10px 25px 0px;
     max-width: 450px;
     padding: 10px
 }
