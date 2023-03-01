@@ -1,4 +1,4 @@
-.cookie-consent-banner {
+#cookie-consent-banner {
 	background-color: #fff;
 	bottom: 0;
 	box-sizing: border-box;
@@ -9,41 +9,41 @@
 	z-index: 1
 }
 
-.cookie-consent-banner__inner {
+#cookie-consent-banner__inner {
 	margin: 0 auto;
 	max-width: 960px;
 	padding-top: 32px
 }
 
-.cookie-consent-banner__copy {
+#cookie-consent-banner__copy {
 	margin-bottom: 16px
 }
 
-.cookie-consent-banner__header {
+#cookie-consent-banner__header {
 	font-size: 20px;
+	font-weight: 400;
 	margin-bottom: 8px
 }
 
-.cookie-consent-banner__description,
-.cookie-consent-banner__header {
-	font-weight: 400;
+#cookie-consent-banner__description,
+#cookie-consent-banner__header {
 	line-height: 24px;
 	padding-left: 10px;
 	padding-right: 10px
 }
 
-.cookie-consent-banner__description {
+#cookie-consent-banner__description {
 	color: #838f93;
 	font-size: 18px
 }
 
-.cookie-consent-banner__description a:-webkit-any-link {
+#cookie-consent-banner__description a:-webkit-any-link {
 	color: -webkit-link;
 	cursor: pointer;
 	text-decoration: underline
 }
 
-.cookie-consent-banner__actions {
+#cookie-consent-banner__actions {
 	padding-top: 25px
 }
 
@@ -54,7 +54,6 @@
 	color: #fff;
 	display: inline-block;
 	font-size: 16px;
-	font-weight: 400;
 	line-height: 20px;
 	min-width: 164px;
 	padding: 11px 13px;
@@ -62,7 +61,7 @@
 	text-decoration: none
 }
 
-.cookie-consent-banner__cta--secondary {
+#cookie-consent-banner__cta--secondary {
 	background-color: transparent;
 	border: 2px solid #3a4649;
 	color: #2ce080;

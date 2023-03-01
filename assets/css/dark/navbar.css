@@ -1,16 +1,12 @@
-.navbar {
+#navbar {
     background-color: #272727
 }
 
-.navbar #name {
-    border-bottom: 1px solid #fff
-}
-
-.navbar .items ul li p:hover {
+#navbar #items ul li p:hover {
     color: #9195ff;
     display: inline
 }
 
-.navbar .items ul li .active {
+#navbar #items ul li .active {
     border-bottom: 1px solid #fff
 }

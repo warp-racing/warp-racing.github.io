@@ -1,12 +1,12 @@
 var amountOfSlides = 4;
 var slide = 0;
 var timeout;
-var navbarHeight = document.getElementsByClassName("navbar")[0].offsetHeight;
+var navbarHeight = document.getElementById("navbar").offsetHeight;
 var entryClassSlide = 0;
 
 const setCookie = (name, value, days = 7) => {
     const expires = new Date(Date.now() + days * 864e5).toUTCString()
-    document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + expires + "; path=/"
+    document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + expires + "; path=/; SameSite=Strict"
 }
 
 const getCookie = (name) => {
@@ -25,7 +25,8 @@ const deleteCookie = (name,) => {
 }
 
 function updateNavbar(activeElement) {
-    var navbarItems = ["welcome", "about-us", "meet-the-team", "our-cars", "portfolios"];
+    const navbarItems = ["welcome", "about-us", "meet-the-team", "our-cars", "portfolios"].map(i => 'nav_' + i);
+    activeElement = `nav_${activeElement}`;
 
     for (let i = 0; i < navbarItems.length; i++) {
         if (navbarItems[i] == activeElement) {
@@ -49,21 +50,26 @@ function updateTheme() {
     var css = document.createElement("link");
     css.rel = "stylesheet";
 
+    var themeToggle = document.getElementById("theme-toggle");
+
     if (darkTheme) {
         css.href = "assets/css/dark/master.css";
-
-        document.getElementById("theme-toggle").className = "fa fa-sun-o";
+        themeToggle.className = "fa fa-sun-o";
     } else {
         css.href = "assets/css/light/master.css";
-
-        document.getElementById("theme-toggle").className = "fa fa-moon-o";
+        themeToggle.className = "fa fa-moon-o";
     }
 
     document.head.appendChild(css);
 }
 
-function changeTheme() {
+function toggleTeam() {
     setCookie("theme", getCookie("theme") == "dark" ? "light" : "dark", 365);
+    updateTheme();
+}
+
+document.getElementById("theme-toggle").onclick = function () {
+    setCookie("theme", (getCookie("theme") == "dark") ? "light" : "dark", 365);
     updateTheme();
 }
 
@@ -72,7 +78,7 @@ function updateSlide() {
         slide = 1;
     }
 
-    document.getElementsByClassName("welcome")[0].style["background-image"] = `url(assets/img/slider/${slide}.webp)`;
+    document.getElementById("welcome").style["background-image"] = `url(assets/img/slider/${slide}.webp)`;
 
     for (let i = 1; i <= amountOfSlides; i++) {
         var dot = document.getElementById(`dot-${i}`);
@@ -88,7 +94,7 @@ function updateSlide() {
 }
 
 function scrollToElement(element) {
-    window.scrollTo(window.scrollX, document.getElementsByClassName(element)[0].getBoundingClientRect().top + window.scrollY - (Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth) < 750 ? 0 : navbarHeight));
+    window.scrollTo(window.scrollX, document.getElementById(element).getBoundingClientRect().top + window.scrollY - (Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth) < 750 ? 0 : navbarHeight));
 }
 
 function updateSlideTo(newSlide) {
@@ -110,7 +116,7 @@ function entryClassSlider() {
 updateSlide();
 
 window.onscroll = function () {
-    const navbar = document.getElementsByClassName("navbar")[0];
+    const navbar = document.getElementById("navbar");
 
     if (Math.max(
         document.body.scrollWidth,
@@ -118,10 +124,7 @@ window.onscroll = function () {
         document.body.offsetWidth,
         document.documentElement.offsetWidth,
         document.documentElement.clientWidth
-    ) < 750) {
-        navbar.style.position = "static";
-        navbar.style["z-index"] = "auto";
-    } else if (window.pageYOffset >= navbar.offsetTop) {
+    ) > 900) {
         navbar.style.position = "fixed";
         navbar.style["z-index"] = 1;
     } else {
@@ -129,10 +132,10 @@ window.onscroll = function () {
         navbar.style["z-index"] = "auto";
     }
 
-    const meet_the_team = document.getElementsByClassName("meet-the-team")[0].offsetTop - navbarHeight;
-    const about_us = document.getElementsByClassName("about-us")[0].offsetTop - navbarHeight;
-    const our_cars = document.getElementsByClassName("our-cars")[0].offsetTop - navbarHeight;
-    const portfolios = document.getElementsByClassName("portfolios")[0].offsetTop - navbarHeight;
+    const portfolios = document.getElementById("portfolios").offsetTop - navbarHeight;
+    const our_cars = document.getElementById("our-cars").offsetTop - navbarHeight;
+    const meet_the_team = document.getElementById("meet-the-team").offsetTop - navbarHeight;
+    const about_us = document.getElementById("about-us").offsetTop - navbarHeight;
 
     if (window.scrollY >= portfolios) {
         updateNavbar("portfolios");
@@ -142,7 +145,7 @@ window.onscroll = function () {
         updateNavbar("meet-the-team");
     } else if (window.scrollY >= about_us) {
         updateNavbar("about-us");
-    }else {
+    } else {
         updateNavbar("welcome");
     }
 }
@@ -158,7 +161,7 @@ window.onload = function () {
     const cookieConsent = getCookie("cookieConsent");
 
     if (cookieConsent != "true" && cookieConsent != "false") {
-        document.getElementsByClassName("cookie-consent-banner")[0].style.display = "block";
+        document.getElementById("cookie-consent-banner").style.display = "block";
     } else if (cookieConsent == "true") {
         document.body.innerHTML += `<script async src="//static.getclicky.com/101399311.js"></script><noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101399311ns.gif" /></p></noscript>`;
     }
@@ -168,16 +171,16 @@ window.onload = function () {
     entryClassSlider();
 }
 
-document.getElementsByClassName("cookie-consent-banner__cta")[0]
+document.getElementById("cookie-consent-banner__cta")
     .onclick = function () {
         setCookie("cookieConsent", "true", 365);
-        document.getElementsByClassName("cookie-consent-banner")[0].style.display = "none";
+        document.getElementById("cookie-consent-banner").style.display = "none";
 
         window.location.reload(); // Reload the page.
     };
 
-document.getElementsByClassName("cookie-consent-banner__cta cookie-consent-banner__cta--secondary")[0]
+document.getElementById("cookie-consent-banner__cta--secondary")
     .onclick = function () {
         setCookie("cookieConsent", "false", 365);
-        document.getElementsByClassName("cookie-consent-banner")[0].style.display = "none";
+        document.getElementById("cookie-consent-banner").style.display = "none";
     };

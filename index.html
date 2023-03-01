@@ -18,60 +18,58 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav id="navbar">
         <img id="logo" src="assets/img/logo.webp" alt="Logo">
-        <p id="name">
-            <b>WΔRP</b>
-        </p>
+        <p id="name">WΔRP</p>
 
-        <div class="items">
+        <div id="items">
             <ul>
                 <li>
-                    <p onclick="scrollToElement('welcome');" id="welcome">
+                    <p onclick="scrollToElement('welcome');" id="nav_welcome">
                         Welcome
                     </p>
                 </li>
                 <li>
-                    <p onclick="scrollToElement('about-us');" id="about-us">
+                    <p onclick="scrollToElement('about-us');" id="nav_about-us">
                         About Us
                     </p>
                 </li>
                 <li>
-                    <p onclick="scrollToElement('meet-the-team');" id="meet-the-team">
+                    <p onclick="scrollToElement('meet-the-team');" id="nav_meet-the-team">
                         Meet The Team
                     </p>
                 </li>
                 <li>
-                    <p onclick="scrollToElement('our-cars')" id="our-cars">
+                    <p onclick="scrollToElement('our-cars')" id="nav_our-cars">
                         Our Cars
                     </p>
                 </li>
                 <li>
-                    <p onclick="scrollToElement('portfolios')" id="portfolios">
+                    <p onclick="scrollToElement('portfolios')" id="nav_portfolios">
                         Portfolios
                     </p>
                 </li>
             </ul>
         </div>
 
-        <i id="theme-toggle" class="fa fa-moon-o" onclick="changeTheme();"></i>
+        <i id="theme-toggle" class="fa fa-moon-o" onclick="toggleTeam()"></i>
     </nav>
-    <div class="welcome">
-        <div class="welcome-text">
+    <div id="welcome">
+        <div id="welcome-text">
             <h1>WΔRP</h1>
             <br>
             <br>
             <p>Defining Speed</p>
         </div>
 
-        <div class="dots">
+        <div id="dots">
             <span class="dot selected-dot" id="dot-1" onclick="updateSlideTo(1);"></span>
             <span class="dot" id="dot-2" onclick="updateSlideTo(2);"></span>
             <span class="dot" id="dot-3" onclick="updateSlideTo(3);"></span>
             <span class="dot" id="dot-4" onclick="updateSlideTo(4);"></span>
         </div>
     </div>
-    <div class="about-us">
+    <div id="about-us">
         <h2>About Us</h2>
         <p>
             WΔRP is a team of four 13-14 year-old boys from Saint Olave's Grammar
@@ -82,13 +80,13 @@
             through hands-on-learning.
         </p>
     </div>
-    <div class="meet-the-team">
+    <div id="meet-the-team">
         <h2>Meet The Team</h2>
 
         <div class="card">
             <img src="assets/img/abhinav-malladi.webp" alt="Abhinav Mallidi Image">
-            <h3>Abhinav Mallidi</h3>
-            <h3 id="role">Team Manager / Engineer</h3>
+            <h3>Abhinav Malladi</h3>
+            <h4>Team Manager / Engineer</h4>
             <br>
             <p>
                 As the team manager, I kept the team on top of deadlines and made sure everyone was doing their
@@ -102,7 +100,7 @@
         <div class="card">
             <img src="assets/img/aneeq-weerasinghe.webp" alt="Aneeq Weerasinghe Image">
             <h3>Aneeq Weerasinghe</h3>
-            <h3 id="role">Portfolio Manager / IT</h3>
+            <h4>Portfolio Manager / IT</h4>
             <br>
             <p>
                 As the portfolio manager, I oversaw the creation of the portfolio to make sure the designn scheme
@@ -114,11 +112,13 @@
         <div class="card">
             <img src="assets/img/dennis-ellimoottil.webp" alt="Dennis Ellimoottil Image">
             <h3>Dennis Ellimoottil</h3>
-            <h3 id="role">Portfolio / Finance Manager</h3>
+            <h4>Portfolio / Finance Manager</h4>
             <br>
             <p>
                 As my main role was on the portfolio, my job was not only to get the necessary content on there, but
-                also to make sure that it was top quality. As financing manager, I also had to handle manufacturing, and merchandise costs for our team. I oversaw the process of
+                also to make sure that it was top quality. As financing manager, I also had to handle manufacturing,
+                and
+                merchandise costs for our team. I oversaw the process of
                 obtaining sponsorships for our team.
             </p>
         </div>
@@ -126,7 +126,7 @@
         <div class="card">
             <img src="assets/img/neal-ye.webp" alt="Neal Ye Image">
             <h3>Neal Ye</h3>
-            <h3 id="role">Graphics Designer / Engineer</h3>
+            <h4>Graphics Designer / Engineer</h4>
             <br>
             <p>
                 My main role was on the creation and graphic representation of our car. I made sure that the car
@@ -138,7 +138,7 @@
             </p>
         </div>
     </div>
-    <div class="about-f1-in-schools">
+    <div id="about-f1-in-schools">
         <h2>F1 in Schools</h2>
         <img alt="F1 in Schools Logo" id="f1-in-schools-logo">
         <p>The F1 in Schools challenge is a STEM based, team challenge, targeted at all students between the ages of 9
@@ -147,9 +147,9 @@
             a 20m track, and the teams are not only judged by the speed of their car, but also on their portfolios,
             marketing, verbal presentations, pit display, and more.</p>
 
-        <a href="https://www.f1inschools.co.uk/" target="_blank"><button class="learn-more">Learn More</button></a>
+        <a href="https://www.f1inschools.co.uk/" target="_blank"><button id="learn-more">Learn More</button></a>
     </div>
-    <div class="our-cars">
+    <div id="our-cars">
         <h2>Our Cars</h2>
 
         <div class="car-banner">
@@ -168,7 +168,7 @@
             </div>
         </div>
     </div>
-    <div class="portfolios">
+    <div id="portfolios">
         <h2>Portfolios</h2>
 
         <p>These portfolios remain the sole intellectual property of WΔRP. You <b>may not</b> copy any information from
@@ -179,7 +179,7 @@
                 target="_blank">Entry Class</a></p>
     </div>
 
-    <div class="footer">
+    <div id="footer">
         <p id="copyright">©<a href="https://github.com/skifli/warp-f1/blob/main/LICENSE.md" target="_blank">skifli</a>
             2022 - {current_year}. All rights
             reserved.</p>
@@ -201,11 +201,11 @@
             </li>
         </ul>
     </div>
-    <div class="cookie-consent-banner">
-        <div class="cookie-consent-banner__inner">
-            <div class="cookie-consent-banner__copy">
-                <div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES &#127850;</div>
-                <div class="cookie-consent-banner__description">We use cookies to analyse traffic to our site. The
+    <div id="cookie-consent-banner">
+        <div id="cookie-consent-banner__inner">
+            <div id="cookie-consent-banner__copy">
+                <div id="cookie-consent-banner__header">THIS WEBSITE USES COOKIES &#127850;</div>
+                <div id="cookie-consent-banner__description">We use cookies to analyse traffic to our site. The
                     services we use for analytics may combine it with other information that you've provided to them, or
                     that they've collected from your use of their services. You can accept or deny the use of analytics
                     cookies on
@@ -213,9 +213,9 @@
                     disabled.
                 </div>
 
-                <div class="cookie-consent-banner__actions">
-                    <a href="#" class="cookie-consent-banner__cta">Accept All</a>
-                    <a href="#" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">Only
+                <div id="cookie-consent-banner__actions">
+                    <a href="#" id="cookie-consent-banner__cta" class="cookie-consent-banner__cta">Accept All</a>
+                    <a href="#" id="cookie-consent-banner__cta--secondary" class="cookie-consent-banner__cta">Only
                         Functional</a>
                 </div>
             </div>
