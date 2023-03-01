@@ -163,7 +163,18 @@ window.onload = function () {
     if (cookieConsent != "true" && cookieConsent != "false") {
         document.getElementById("cookie-consent-banner").style.display = "block";
     } else if (cookieConsent == "true") {
-        document.body.innerHTML += `<script async src="//static.getclicky.com/101399311.js"></script><noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101399311ns.gif" /></p></noscript>`;
+        const head = document.getElementsByTagName('head')[0];
+
+        let script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-FNNCSS8R6W"
+
+        head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+
+        gtag('js', new Date());
+        gtag('config', 'G-FNNCSS8R6W')
     }
 
     window.onscroll();
