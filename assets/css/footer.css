@@ -21,7 +21,8 @@
     padding-left: 20px
 }
 
-.footer ul li img {
+#footer ul li img {
+    height: auto;
     width: 30px
 }
 
