@@ -166,7 +166,7 @@ window.onload = function () {
         const head = document.getElementsByTagName('head')[0];
 
         let script = document.createElement("script");
-        script.src = "https://www.googletagmanager.com/gtag/js?id=G-FNNCSS8R6W"
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-T4H3H4C6PF"
 
         head.appendChild(script);
 
@@ -174,7 +174,7 @@ window.onload = function () {
         function gtag() { dataLayer.push(arguments) };
 
         gtag('js', new Date());
-        gtag('config', 'G-FNNCSS8R6W')
+        gtag('config', 'G-T4H3H4C6PF')
     }
 
     window.onscroll();
