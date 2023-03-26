@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+
+:root {
+    --accent-dark: #474ba5;
+    --accent-light: #9195ff;
+}
+
+* {
+    color: #FFF;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth
+}
+
+body {
+    background-color: #272727;
+}
+
+#navbar {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+    align-items: center;
+    display: flex;
+    min-height: 50px;
+    padding: 1rem;
+    width: 100%
+}
+
+#navbar.transparent {
+    box-shadow: none;
+    position: absolute;
+    z-index: 999;
+}
+
+#navbar #logo {
+    height: 50px;
+}
+
+#navbar #name {
+    font-size: 27.5px;
+    font-weight: 600;
+    left: 125px;
+    margin-left: 20px
+}
+
+#navbar #items {
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+}
+
+#navbar #items ul {
+    display: flex;
+    list-style: none
+}
+
+#navbar #items ul li p {
+    cursor: pointer;
+    margin-left: 10px;
+    display: inline;
+    font-size: 20px;
+    transition: color 0.25s ease-in
+}
+
+#navbar #items ul li p:hover {
+    color: #9195ff
+}
+
+#navbar #items ul li p#active {
+    color: #9195ff
+}
+
+@media only screen and (max-width:900px) {
+    #navbar {
+        flex-direction: column;
+        justify-content: space-around
+    }
+
+    #navbar #logo {
+        margin: 0
+    }
+
+    #navbar #name {
+        border-bottom: none;
+        margin: 0;
+        padding-top: 1rem;
+        position: static
+    }
+
+    #navbar #items {
+        position: initial;
+        margin: 0;
+    }
+
+    #navbar #items ul {
+        flex-direction: column
+    }
+
+    #navbar #items ul li {
+        padding: .5rem 0
+    }
+}
