@@ -55,19 +55,20 @@ body {
     list-style: none
 }
 
-#navbar #items ul li p {
+#navbar #items ul li a {
     cursor: pointer;
     margin-left: 10px;
     display: inline;
     font-size: 20px;
+    text-decoration: none;
     transition: color 0.25s ease-in
 }
 
-#navbar #items ul li p:hover {
+#navbar #items ul li a:hover {
     color: #9195ff
 }
 
-#navbar #items ul li p#active {
+#navbar #items ul li a#active {
     color: #9195ff
 }
 
