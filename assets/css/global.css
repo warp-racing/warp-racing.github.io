@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400&display=swap');
 
 :root {
     --accent-dark: #474ba5;
@@ -15,33 +15,24 @@
 }
 
 body {
-    background-color: #272727;
+    background-color: #1d1d1f;
 }
 
 #navbar {
+    backdrop-filter: saturate(1.8) blur(20px);
+    background-color: #1d1d1f;
     box-shadow: 0 0 20px rgba(0, 0, 0, .15);
     align-items: center;
     display: flex;
-    min-height: 50px;
-    padding: 1rem;
+    min-height: 25px;
+    padding: 0.5rem;
+    position: fixed;
+    top: 0px;
     width: 100%
 }
 
-#navbar.transparent {
-    box-shadow: none;
-    position: absolute;
-    z-index: 999;
-}
-
 #navbar #logo {
-    height: 50px;
-}
-
-#navbar #name {
-    font-size: 27.5px;
-    font-weight: 600;
-    left: 125px;
-    margin-left: 20px
+    height: 40px;
 }
 
 #navbar #items {
@@ -52,15 +43,18 @@ body {
 
 #navbar #items ul {
     display: flex;
-    list-style: none
+    list-style: none;
+    text-align: center
 }
 
 #navbar #items ul li a {
     cursor: pointer;
     margin-left: 10px;
     display: inline;
-    font-size: 20px;
+    font-size: 17.5px;
+    text-align: center;
     text-decoration: none;
+    font-weight: 200;
     transition: color 0.25s ease-in
 }
 
@@ -70,35 +64,4 @@ body {
 
 #navbar #items ul li a#active {
     color: #9195ff
-}
-
-@media only screen and (max-width:900px) {
-    #navbar {
-        flex-direction: column;
-        justify-content: space-around
-    }
-
-    #navbar #logo {
-        margin: 0
-    }
-
-    #navbar #name {
-        border-bottom: none;
-        margin: 0;
-        padding-top: 1rem;
-        position: static
-    }
-
-    #navbar #items {
-        position: initial;
-        margin: 0;
-    }
-
-    #navbar #items ul {
-        flex-direction: column
-    }
-
-    #navbar #items ul li {
-        padding: .5rem 0
-    }
 }

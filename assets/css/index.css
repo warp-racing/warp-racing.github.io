@@ -1,5 +1,5 @@
 #welcome {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(../img/cover.webp);
+    background-image: url(../img/New\ Project.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,7 +16,6 @@
 }
 
 #welcome #welcome-text h2 {
-    font-family: 'Poppins', sans-serif;
     font-size: 100px;
     text-align: center
 }
