@@ -1,4 +1,5 @@
 {
+    // Update `../.devcontainer/devcontainer.json` as well.
     "recommendations": [
         "albert.tabout",
         "alexanderte.dainty-one-dark-pro-vscode",

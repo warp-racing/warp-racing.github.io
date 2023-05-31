@@ -3,6 +3,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				// Update `../.vscode/extensions.json` as well.
 				"albert.tabout",
 				"alexanderte.dainty-one-dark-pro-vscode",
 				"christian-kohler.path-intellisense",
