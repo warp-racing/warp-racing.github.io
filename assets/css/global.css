@@ -1,56 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400&display=swap');
 
-@keyframes a {
-    0% {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
+:root {
+    --accent-dark: #474ba5;
+    --accent-light: #9195ff;
 }
 
 * {
-    animation: a 1s ease;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
+    color: #FFF;
+    font-family: 'Noto Sans', sans-serif;
     box-sizing: border-box;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 200;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
-    text-align: center
+    scroll-behavior: smooth
 }
 
 body {
-    background-color: #fff;
-    color: #000
+    background-color: #1d1d1f;
 }
 
-::-webkit-scrollbar {
-    max-width: 10px
+#navbar {
+    backdrop-filter: saturate(1.8) blur(20px);
+    background-color: #1d1d1f;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+    align-items: center;
+    display: flex;
+    min-height: 25px;
+    padding: 0.5rem;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, .1);
-    border-radius: 10px
+#navbar #logo {
+    height: 40px;
 }
 
-::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, .2);
-    border-radius: 10px
+#navbar #items {
+    right: 0;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, .3)
+#navbar #items ul {
+    display: flex;
+    list-style: none;
+    text-align: center
 }
 
-::-webkit-scrollbar-thumb:active {
-    background: rgba(0, 0, 0, .4)
+#navbar #items ul li a {
+    cursor: pointer;
+    margin-left: 10px;
+    display: inline;
+    font-size: 17.5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 200;
+    transition: color 0.25s ease-in
 }
 
-a {
-    color: #474ba5;
-    text-decoration: underline
+#navbar #items ul li a:hover {
+    color: #9195ff
+}
+
+#navbar #items ul li a#active {
+    color: #9195ff
 }
