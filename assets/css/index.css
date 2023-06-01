@@ -1,12 +1,12 @@
 #welcome {
+    align-items: center;
     background-image: url(../img/cover.png);
-    background-position: center;
+    background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
-    height: 100vh;
-    align-items: center;
     display: flex;
+    height: 100vh;
     justify-content: center
 }
 
@@ -22,5 +22,5 @@
 
 #welcome #welcome-text p {
     font-size: 25px;
-    text-align: center;
+    text-align: center
 }
