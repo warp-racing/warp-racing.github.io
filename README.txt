@@ -1,1 +1,1 @@
-This is the repository where the code for our F1 in Schools team website is held. You can view the website here: https://warpf1s.github.io/.
+This is the repository where the production code for our F1 in Schools team website is held. You can view it here: https://warpf1s.github.io/. The development website's repository can be found here: https://github.com/warpf1s/development
