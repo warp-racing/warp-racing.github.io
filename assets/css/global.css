@@ -14,49 +14,12 @@
     scroll-behavior: smooth
 }
 
-#navbar,
-body {
-    background-color: #1d1d1f
+h2 {
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-decoration: underline
 }
 
-#navbar {
-    align-items: center;
-    backdrop-filter: saturate(1.8) blur(20px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
-    display: flex;
-    justify-content: space-between;
-    padding: .5rem;
-    position: fixed;
-    top: 0;
-    width: 100%
-}
-
-#navbar #logo {
-    height: 40px
-}
-
-#navbar #items {
-    right: 0
-}
-
-#navbar #items ul {
-    display: flex;
-    list-style: none;
-    text-align: center
-}
-
-#navbar #items ul li a {
-    cursor: pointer;
-    display: inline;
-    font-size: 17.5px;
-    font-weight: 200;
-    margin-left: 10px;
-    text-align: center;
-    text-decoration: none;
-    transition: color .25s ease-in
-}
-
-#navbar #items ul li a#active,
-#navbar #items ul li a:hover {
-    color: #9195ff
+p {
+    text-align: justify
 }

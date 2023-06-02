@@ -1,6 +1,6 @@
 #welcome {
     align-items: center;
-    background-image: url(../img/cover.png);
+    background-image: url(../../img/cover.jpg);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,10 +17,22 @@
 
 #welcome #welcome-text h2 {
     font-size: 100px;
-    text-align: center
+    text-align: center;
+    text-decoration: none
 }
 
 #welcome #welcome-text p {
     font-size: 25px;
     text-align: center
+}
+
+#about-us {
+    margin: 25px auto;
+    width: 50%
+}
+
+@media only screen and (max-width: 1000px) {
+    #about-us {
+        width: 90%
+    }
 }
