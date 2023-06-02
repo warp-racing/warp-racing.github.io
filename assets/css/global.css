@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400&display=swap");
 
 :root {
-    --accent-dark: #474ba5;
-    --accent-light: #9195ff
+    --accent-dark: #9195ff;
 }
 
 * {
@@ -22,4 +21,8 @@ h2 {
 
 p {
     text-align: justify
+}
+
+a {
+    color: var(--accent-dark)
 }
