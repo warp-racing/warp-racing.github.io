@@ -36,3 +36,19 @@
         width: 90%
     }
 }
+
+#meet-the-team #card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#meet-the-team #card img {
+    object-fit: cover;
+    height: auto;
+    width: 100%
+}
