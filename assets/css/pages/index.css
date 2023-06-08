@@ -26,13 +26,13 @@
     text-align: center
 }
 
-#about-us {
+.middle {
     margin: 25px auto;
     width: 50%
 }
 
 @media only screen and (max-width: 1000px) {
-    #about-us {
+    .middle {
         width: 90%
     }
 }
