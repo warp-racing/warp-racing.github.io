@@ -45,10 +45,41 @@
     width: 100%;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 10px;
 }
 
 #meet-the-team #card img {
     object-fit: cover;
     height: auto;
     width: 100%
+}
+
+#meet-the-team #members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2%;
+    row-gap: 25px;
+}
+
+#meet-the-team #member {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 49%;
+}
+
+@media only screen and (max-width: 1000px) {
+    #meet-the-team #members {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    #meet-the-team #member {
+        width: 100%;
+    }
 }
