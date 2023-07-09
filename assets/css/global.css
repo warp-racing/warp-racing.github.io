@@ -44,6 +44,22 @@ a {
     justify-content: center
 }
 
+.cover #cover-text {
+    background-color: none;
+    filter: none
+}
+
+.cover #cover-text h1 {
+    font-size: 100px;
+    text-align: center;
+    text-decoration: none
+}
+
+.cover #cover-text p {
+    font-size: 25px;
+    text-align: center
+}
+
 .middle {
     margin: 25px auto;
     width: 50%
