@@ -1,13 +1,5 @@
 #welcome {
-    align-items: center;
     background-image: url(../../img/cover.jpg);
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
-    display: flex;
-    height: 100vh;
-    justify-content: center
 }
 
 #welcome #welcome-text {
