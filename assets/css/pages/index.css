@@ -35,7 +35,7 @@
     width: 100%
 }
 
-#meet-the-team #members {
+#members {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -44,7 +44,7 @@
     row-gap: 25px;
 }
 
-#meet-the-team #member {
+#member {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: inline-block;
     flex-direction: column;
@@ -54,13 +54,19 @@
     width: 49%;
 }
 
+#member p#role {
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 5px;
+}
+
 @media only screen and (max-width: 1000px) {
-    #meet-the-team #members {
+    #members {
         flex-direction: column;
         row-gap: 10px;
     }
 
-    #meet-the-team #member {
+    #member {
         width: 100%;
     }
 }
