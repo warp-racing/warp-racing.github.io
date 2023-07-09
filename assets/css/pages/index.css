@@ -18,17 +18,6 @@
     text-align: center
 }
 
-.middle {
-    margin: 25px auto;
-    width: 50%
-}
-
-@media only screen and (max-width: 1000px) {
-    .middle {
-        width: 90%
-    }
-}
-
 #meet-the-team #card {
     display: flex;
     justify-content: center;

@@ -43,3 +43,14 @@ a {
     height: 100vh;
     justify-content: center
 }
+
+.middle {
+    margin: 25px auto;
+    width: 50%
+}
+
+@media only screen and (max-width: 1000px) {
+    .middle {
+        width: 90%
+    }
+}
