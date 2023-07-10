@@ -1,0 +1,56 @@
+#cover {
+    background-image: url(../../img/index.jpg);
+}
+
+#meet-the-team #card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 10px;
+}
+
+#meet-the-team #card img {
+    object-fit: cover;
+    height: auto;
+    width: 100%
+}
+
+#members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    column-gap: 2%;
+    row-gap: 25px;
+}
+
+#member {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 49%;
+}
+
+#member p#role {
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #members {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    #member {
+        width: 100%;
+    }
+}

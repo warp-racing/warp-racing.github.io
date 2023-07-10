@@ -1,0 +1,75 @@
+#cover {
+    background-image: url(../../img/our-cars.png);
+}
+
+#our-cars .car-banner {
+    background-color: #474ba5;
+    padding: 10px 0 10px 20px
+}
+
+#our-cars .car-banner h3 {
+    display: table;
+    font-size: 35px;
+    text-decoration: none;
+    text-align: left
+}
+
+#our-cars .car {
+    display: flex
+}
+
+#our-cars .car .car-image {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
+    display: absolute;
+    float: left;
+    width: 50%
+}
+
+#our-cars .car .car-about {
+    display: absolute;
+    float: right;
+    height: auto;
+    padding: 25px;
+    width: 50%
+}
+
+#our-cars .car .car-about p {
+    font-size: 17.5px;
+    padding: 100px 0
+}
+
+@media only screen and (max-width:1150px) {
+    #our-cars .car-banner {
+        padding-left: 0
+    }
+
+    #our-cars .car-banner h3 {
+        text-align: center;
+        width: 100%
+    }
+
+    #our-cars .car {
+        display: inline
+    }
+
+    #our-cars .car .car-image {
+        display: block;
+        float: none;
+        min-height: 250px;
+        width: 100%
+    }
+
+    #our-cars .car .car-about {
+        display: block;
+        float: none;
+        padding: 25px 10px 2.5px;
+        width: 100%
+    }
+
+    #our-cars .car .car-about p {
+        padding: 10px 0
+    }
+}
