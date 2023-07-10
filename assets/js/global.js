@@ -42,7 +42,9 @@ onlyFunctionalCookies.addEventListener('click', function () {
 });
 
 window.onload = function () {
-    if (getCookie('cookieConsent') === 'true') {
+    let cookieConsent = getCookie('cookieConsent');
+
+    if (cookieConsent === 'true') {
         cookieConsentBanner.style.display = 'none';
 
         const head = document.getElementsByTagName('head')[0];
@@ -63,7 +65,7 @@ window.onload = function () {
             t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "hdjddzo6n4");
-    } else {
+    } else if (cookieConsent == "") {
         cookieConsentBanner.style.display = 'block';
     }
 }
