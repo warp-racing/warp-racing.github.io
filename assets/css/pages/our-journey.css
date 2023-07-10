@@ -6,10 +6,6 @@
     padding: 50px 0px;
 }
 
-#our-journey h2 {
-    text-align: center;
-}
-
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
