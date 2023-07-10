@@ -8,7 +8,6 @@
 }
 
 #our-cars .car-banner h3 {
-    display: table;
     font-size: 35px;
     text-decoration: none;
     text-align: left
@@ -19,6 +18,7 @@
 }
 
 #our-cars .car .car-image {
+    transition: background-image 1s ease-in;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,7 +29,6 @@
 }
 
 #our-cars .car .car-about {
-    display: absolute;
     float: right;
     height: auto;
     padding: 25px;
