@@ -1,56 +1,59 @@
 #cover {
-    background-image: url(../../img/index.jpg);
+    background-image: url(../../img/index.jpg)
 }
 
 #meet-the-team #card {
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 10px;
+    overflow: hidden;
+    width: 100%
 }
 
 #meet-the-team #card img {
-    object-fit: cover;
     height: auto;
+    object-fit: cover;
     width: 100%
 }
 
 #members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: stretch;
     column-gap: 2%;
-    row-gap: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 25px
+}
+
+#member,
+#members {
+    justify-content: center
 }
 
 #member {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
     display: inline-block;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 25px;
-    width: 49%;
+    width: 49%
 }
 
 #member p#role {
     font-size: 15px;
     font-weight: 100;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width:1000px) {
     #members {
         flex-direction: column;
-        row-gap: 10px;
+        row-gap: 10px
     }
 
     #member {
-        width: 100%;
+        width: 100%
     }
 }

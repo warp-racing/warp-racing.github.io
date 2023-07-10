@@ -1,5 +1,5 @@
 #cover {
-    background-image: url(../../img/our-cars.png);
+    background-image: url(../../img/our-cars.png)
 }
 
 #our-cars .car-banner {
@@ -9,8 +9,8 @@
 
 #our-cars .car-banner h3 {
     font-size: 35px;
-    text-decoration: none;
-    text-align: left
+    text-align: left;
+    text-decoration: none
 }
 
 #our-cars .car {
@@ -18,13 +18,13 @@
 }
 
 #our-cars .car .car-image {
-    transition: background-image 1s ease-in;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
     display: absolute;
     float: left;
+    transition: background-image 1s ease-in;
     width: 50%
 }
 

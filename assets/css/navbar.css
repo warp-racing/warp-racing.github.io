@@ -1,6 +1,6 @@
 #navbar,
 body {
-    background-color: var(--background-color);
+    background-color: var(--background-color)
 }
 
 #navbar {
@@ -46,20 +46,18 @@ body {
     color: var(--accent)
 }
 
-@media only screen and (max-width: 1000px) {
-    #navbar {
-        flex-direction: column
-    }
+@media only screen and (max-width:1000px) {
 
+    #navbar,
     #navbar ul {
         flex-direction: column
     }
 
     #navbar ul li {
-        padding: 0.5rem 0
+        padding: .5rem 0
     }
 
     #navbar #items ul li a {
-        margin-left: 0px
+        margin-left: 0
     }
 }

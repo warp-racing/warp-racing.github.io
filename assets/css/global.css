@@ -5,8 +5,8 @@
     --accent-darker: #474ba5;
     --background-color: #1d1d1f;
     --color-accent: #3b3b40;
-    --darker-color-accent: black;
-    --opposite-color-accent: #FFF;
+    --darker-color-accent: #000;
+    --opposite-color-accent: #fff
 }
 
 * {
@@ -20,14 +20,17 @@
 
 h2 {
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 15px
+}
+
+h2,
+h3 {
     text-decoration: underline
 }
 
 h3 {
     font-weight: 300;
-    margin-bottom: 10px;
-    text-decoration: underline
+    margin-bottom: 10px
 }
 
 p {
@@ -70,7 +73,7 @@ a {
     width: 50%
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width:1000px) {
     .middle {
         width: 90%
     }
