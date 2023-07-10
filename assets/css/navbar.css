@@ -30,7 +30,7 @@ body {
 }
 
 #navbar #items ul li a {
-    color: white;
+    color: var(--opposite-color-accent);
     cursor: pointer;
     display: inline;
     font-size: 17.5px;
@@ -43,7 +43,7 @@ body {
 
 #navbar #items ul li a#active,
 #navbar #items ul li a:hover {
-    color: var(--accent-dark)
+    color: var(--accent)
 }
 
 @media only screen and (max-width: 1000px) {

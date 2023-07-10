@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;400&display=swap");
 
 :root {
-    --accent-dark: #9195ff;
+    --accent: #9195ff;
+    --color-accent: #3b3b40;
+    --darker-color-accent: black;
+    --opposite-color-accent: #FFF;
 }
 
 * {
     box-sizing: border-box;
-    color: #fff;
+    color: var(--opposite-color-accent);
     font-family: Noto Sans, sans-serif;
     margin: 0;
     padding: 0;
@@ -30,7 +33,7 @@ p {
 }
 
 a {
-    color: var(--accent-dark)
+    color: var(--accent)
 }
 
 .cover {
