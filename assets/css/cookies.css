@@ -1,0 +1,54 @@
+#cookie-consent-banner {
+    background-color: #1d1d1f;
+    bottom: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
+    box-sizing: border-box;
+    left: 0;
+    position: fixed;
+    display: none;
+    width: 100%;
+    z-index: 1;
+}
+
+#cookie-consent-banner h2,
+#cookie-consent-banner a {
+    text-decoration: none;
+}
+
+#cookie-consent-banner #accept-all-cookies {
+    background-color: #2ce080;
+    border-radius: 2px;
+    border: 2px solid #2ce080;
+    color: black;
+    transition: background-color 0.25s ease-in;
+    padding: 9px 13px;
+}
+
+#cookie-consent-banner #accept-all-cookies:hover {
+    background-color: #20ba68
+}
+
+#cookie-consent-banner #button-separator {
+    display: none;
+}
+
+#cookie-consent-banner #only-functional-cookies {
+    background-color: transparent;
+    border: 2px solid #3a4649;
+    transition: border 0.25s ease-in;
+    border-radius: 2px;
+    color: #2ce080;
+    padding: 9px 13px
+}
+
+#cookie-consent-banner #only-functional-cookies:hover {
+    background-color: transparent;
+    border-color: #838f93;
+    color: #22c870
+}
+
+@media only screen and (max-width: 1000px) {
+    #cookie-consent-banner #button-separator {
+        display: inherit;
+    }
+}
