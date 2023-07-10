@@ -2,6 +2,8 @@
 
 :root {
     --accent: #9195ff;
+    --accent-darker: #474ba5;
+    --background-color: #1d1d1f;
     --color-accent: #3b3b40;
     --darker-color-accent: black;
     --opposite-color-accent: #FFF;

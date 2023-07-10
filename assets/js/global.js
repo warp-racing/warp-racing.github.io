@@ -3,10 +3,6 @@ let cookieConsentBanner = document.getElementById('cookie-consent-banner');
 let acceptAllCookies = document.getElementById('accept-all-cookies');
 let onlyFunctionalCookies = document.getElementById('only-functional-cookies');
 
-let entryClassCarImage = document.getElementById('entry-class-car-image');
-
-var entryClassSlide = 0;
-
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
 
@@ -35,16 +31,6 @@ function getCookie(cname) {
     return "";
 }
 
-function entryClassCarSlider() {
-    if (entryClassSlide++ == 3) {
-        entryClassSlide = 1;
-    }
-
-    entryClassCarImage.style["background-image"] = `url(../assets/img/entry-class-car/${entryClassSlide}.png)`;
-
-    setTimeout(entryClassCarSlider, 5000);
-}
-
 acceptAllCookies.addEventListener('click', function () {
     setCookie('cookieConsent', true, 365);
     location.reload();
@@ -55,7 +41,7 @@ onlyFunctionalCookies.addEventListener('click', function () {
     location.reload();
 });
 
-window.onload = function () {
+window.addEventListener("load", function () {
     let cookieConsent = getCookie('cookieConsent');
 
     if (cookieConsent === 'true') {
@@ -82,6 +68,4 @@ window.onload = function () {
     } else if (cookieConsent == "") {
         cookieConsentBanner.style.display = 'block';
     }
-
-    entryClassCarSlider();
-}
+});

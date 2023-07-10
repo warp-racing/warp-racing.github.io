@@ -3,7 +3,7 @@
 }
 
 #our-cars .car-banner {
-    background-color: #474ba5;
+    background-color: var(--accent-darker);
     padding: 10px 0 10px 20px
 }
 

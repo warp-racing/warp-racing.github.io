@@ -1,6 +1,6 @@
 #navbar,
 body {
-    background-color: #1d1d1f
+    background-color: var(--background-color);
 }
 
 #navbar {
