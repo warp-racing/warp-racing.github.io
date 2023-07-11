@@ -7,7 +7,7 @@ function entryClassCarSlider() {
         entryClassSlide = 1;
     }
 
-    entryClassCarImage.style["background-image"] = `url(../assets/img/entry-class-car/${entryClassSlide}.png)`;
+    entryClassCarImage.style["background-image"] = `url(../assets/img/entry-class-car/${entryClassSlide}.webp)`;
 
     setTimeout(entryClassCarSlider, 5000);
 }
