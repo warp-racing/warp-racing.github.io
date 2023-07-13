@@ -46,6 +46,11 @@ function scrollToElement() {
     const params = new URLSearchParams(window.location.search);
 
     const elementID = params.get("id");
+
+    if (elementID === null) {
+        return; // No element to scroll to
+    }
+
     const elementY = window.scrollY + document.getElementById(elementID).getBoundingClientRect().top;
 
     window.scrollTo(0, getWidth() < 1000 ? elementY : elementY - navbar.offsetHeight);
