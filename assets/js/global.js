@@ -4,6 +4,7 @@ let acceptAllCookies = document.getElementById('accept-all-cookies');
 let onlyFunctionalCookies = document.getElementById('only-functional-cookies');
 
 let navbar = document.getElementById("navbar");
+let copyright = document.getElementById("copyright");
 
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
@@ -57,6 +58,8 @@ function scrollToElement() {
 }
 
 window.addEventListener("load", function () {
+    copyright.innerHTML = copyright.innerHTML.replace("{current_year}", new Date().getFullYear());
+
     let cookieConsent = getCookie('cookieConsent');
 
     if (cookieConsent === 'true') {
