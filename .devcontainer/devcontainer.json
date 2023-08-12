@@ -12,7 +12,8 @@
 				"mhutchie.git-graph",
 				"pkief.material-icon-theme",
 				"redhat.vscode-yaml",
-				"ritwickdey.liveserver"
+				"wakatime.vscode-wakatime",
+				"yandeu.five-server"
 			]
 		}
 	}
