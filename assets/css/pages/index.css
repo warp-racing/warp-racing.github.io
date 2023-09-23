@@ -113,10 +113,12 @@ h2 {
 .card-text h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
+    text-align: left;
 }
 
 .card-text p {
     font-size: 0.9rem;
+    text-align: left;
 }
 
 .card-text h3,
