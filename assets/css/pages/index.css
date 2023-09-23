@@ -18,6 +18,7 @@ body {
     margin-bottom: 1rem;
     color: white;
     display: block;
+    padding-left: 10px;
 }
 
 h2 {
@@ -138,6 +139,7 @@ h2 {
         text-align: center;
         display: block;
         font-size: 3rem;
+        padding: 0px;
     }
 
     .canvas-container {
