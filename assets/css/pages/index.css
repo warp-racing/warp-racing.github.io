@@ -20,6 +20,12 @@ body {
     color: white;
 }
 
+h2 {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+}
+
 .canvas-container {
     width: 50%;
     height: 100vh;
@@ -37,4 +43,82 @@ body {
 #title #hover:hover {
     cursor: pointer;
     background-position: left;
+}
+
+/* cards */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 225px;
+    height: 300px;
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .card-text {
+    bottom: 0;
+}
+
+.card-text h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text p {
+    font-size: 0.9rem;
+}
+
+.card-text h3,
+.card-text p {
+    margin: 0;
 }
