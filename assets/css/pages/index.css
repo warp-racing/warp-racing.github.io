@@ -16,8 +16,8 @@ body {
 #title h1 {
     font-size: 5rem;
     margin-bottom: 1rem;
-    display: inline-block;
     color: white;
+    display: block;
 }
 
 h2 {
@@ -121,4 +121,43 @@ h2 {
 .card-text h3,
 .card-text p {
     margin: 0;
+}
+
+@media (max-width: 1000px) {
+    #title-section {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+    }
+
+    #title {
+        width: 100%;
+    }
+
+    #title h1 {
+        text-align: center;
+        display: block;
+    }
+
+    .canvas-container {
+        width: 100vw;
+        height: 50vh;
+        flex-direction: column;
+    }
+
+    /* make cards have their own lines */
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    /*center cards horizontally */
+
+    .card-container {
+        align-items: center;
+    }
 }
