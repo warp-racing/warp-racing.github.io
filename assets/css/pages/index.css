@@ -140,6 +140,28 @@ h2 {
     width: 50%;
 }
 
+#what-is-f1-in-schools #read-more {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    /* Frosted glass background color */
+    color: black;
+    /* Dark text color */
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0px;
+}
+
+/* Hover effect */
+#what-is-f1-in-schools #read-more:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    /* Slightly lighter background on hover */
+}
+
 @media (max-width: 1000px) {
     #title-section {
         flex-direction: column;
