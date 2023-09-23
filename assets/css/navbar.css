@@ -60,6 +60,10 @@ header {
     font-weight: 200;
 }
 
+.nav-links li a#current {
+    color: #9195ff;
+}
+
 /* Media query for mobile responsiveness */
 @media (max-width: 1000px) {
     .company-logo img {
