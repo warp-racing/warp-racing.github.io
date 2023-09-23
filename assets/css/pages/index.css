@@ -1,59 +1,37 @@
-#cover {
-    background-image: url(../../img/index.webp)
+#title-section {
+    background: #0e0e0e;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 5rem;
 }
 
-#meet-the-team #card {
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
+#title {
+    width: 50%;
+}
+
+#title h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    color: white;
+}
+
+.canvas-container {
+    width: 50%;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-    overflow: hidden;
-    width: 100%
-}
-
-#meet-the-team #card img {
-    height: auto;
-    object-fit: cover;
-    width: 100%
-}
-
-#members {
-    align-items: stretch;
-    column-gap: 2%;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 25px
-}
-
-#member,
-#members {
-    justify-content: center
-}
-
-#member {
     align-items: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
-    display: inline-block;
-    flex-direction: column;
-    padding: 25px;
-    width: 49%
 }
 
-#member p#role {
-    font-size: 15px;
-    font-weight: 100;
-    margin-bottom: 5px
+#title #hover {
+    background: linear-gradient(to left, #4245A0 50%, #592087 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
 }
 
-@media only screen and (max-width:1000px) {
-    #members {
-        flex-direction: column;
-        row-gap: 10px
-    }
-
-    #member {
-        width: 100%
-    }
+#title #hover:hover {
+    cursor: pointer;
+    background-position: left;
 }
