@@ -1,5 +1,8 @@
-#title-section {
+body {
     background: #0e0e0e;
+}
+
+#title-section {
     display: flex;
     align-items: center;
     height: 100vh;

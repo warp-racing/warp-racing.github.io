@@ -10,11 +10,6 @@
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/pages/index.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="assets/js/pages/index.js" type="module" defer></script>
 </head>
 
 <body>
@@ -26,8 +21,13 @@
         </div>
 
         <div class="canvas-container">
-            <canvas id="canvas3d"></canvas>
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.455/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/aCxuV9kKR2s7IVPh/scene.splinecode"></spline-viewer>
         </div>
+    </div>
+
+    <div id="the-team">
+
     </div>
 </body>
 
