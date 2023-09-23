@@ -124,6 +124,22 @@ h2 {
     margin: 0;
 }
 
+#what-is-f1-in-schools {
+    background-image: linear-gradient(to right, #4245A0, #592087);
+    display: flex;
+}
+
+#what-is-f1-in-schools #left {
+    background: url(https://media.formula1.com/image/upload/t_16by9South/f_auto/q_auto/v1689156065/fom-website/2023/F1%20in%20Schools/F1%20in%20Schools%20World%20Finals%20Trophy.jpg) no-repeat center center/cover;
+    width: 50%;
+}
+
+#what-is-f1-in-schools #right {
+    color: white;
+    padding: 10rem 5rem;
+    width: 50%;
+}
+
 @media (max-width: 1000px) {
     #title-section {
         flex-direction: column;

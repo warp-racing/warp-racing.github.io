@@ -11,4 +11,10 @@
 
 h1 {
     font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
 }
