@@ -137,6 +137,7 @@ h2 {
     #title h1 {
         text-align: center;
         display: block;
+        font-size: 3rem;
     }
 
     .canvas-container {
