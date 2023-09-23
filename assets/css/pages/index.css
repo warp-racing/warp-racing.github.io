@@ -203,4 +203,18 @@ h2 {
     .card-container {
         align-items: center;
     }
+
+    #what-is-f1-in-schools {
+        flex-direction: column;
+    }
+
+    #what-is-f1-in-schools #left {
+        height: 400px;
+        width: 100%;
+    }
+
+    #what-is-f1-in-schools #right {
+        width: 100%;
+        padding: 2.5rem 2rem;
+    }
 }
