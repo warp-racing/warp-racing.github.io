@@ -6,7 +6,37 @@
     font-family: Noto Sans, sans-serif;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    cursor: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#cursor {
+    width: 8px;
+    height: 8px;
+    background-color: #9195ff;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1001;
+}
+
+#cursor-follower {
+    width: 25px;
+    height: 25px;
+    background-color: #50227d;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* Allow clicks to pass through */
+    transition: transform 0.2s ease-out;
+    /* Add a bit of lag */
+    z-index: 1000;
 }
 
 h1 {
