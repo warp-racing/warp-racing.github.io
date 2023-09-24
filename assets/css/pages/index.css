@@ -54,21 +54,24 @@ h2 {
 }
 
 .card-container {
-    justify-content: center;
-    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Cards will automatically adjust */
+    justify-content: center;
     gap: 25px;
+    /* Adjust the gap between cards */
+    margin: 25px;
 }
 
 .card {
-    width: 300px;
+    /* Remove max-width property */
     height: 300px;
-    margin: 0 10px;
     background: rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
     transition: 0.3s ease-in-out;
+    margin: 0 10px;
+    /* Adjust the margin as needed */
 }
 
 .card::before {
