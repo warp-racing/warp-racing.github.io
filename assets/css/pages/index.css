@@ -43,7 +43,6 @@ h2 {
 }
 
 #title #hover:hover {
-    cursor: pointer;
     background-position: left;
 }
 
@@ -107,7 +106,6 @@ h2 {
 }
 
 .card:hover {
-    cursor: pointer;
     transform: scale(1.1);
 }
 
@@ -183,7 +181,6 @@ h2 {
     font-weight: bold;
     text-decoration: none;
     border: none;
-    cursor: pointer;
     transition: background-color 0.3s ease;
     margin: 10px 0px;
 }
