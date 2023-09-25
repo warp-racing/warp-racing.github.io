@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    cursor: none;
+    cursor: url(../img/cursor.cur), auto;
 }
 
 html,
@@ -15,19 +15,9 @@ body {
     height: 100%;
 }
 
-#cursor {
-    width: 8px;
-    height: 8px;
-    background-color: #9195ff;
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    z-index: 1001;
-}
-
 #cursor-follower {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background-color: #50227d;
     border-radius: 50%;
     position: absolute;
