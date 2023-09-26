@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/pages/index.css">
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
 <body>
@@ -32,22 +31,19 @@
             </div>
         </nav>
     </header>
-
-    <div id="particles-js">
-        <div id="title-section">
-            <div id="title">
-                <h1>LONDON NORTH</h1>
-                <h1>2022 - 23 ENTRY</h1>
-                <h1 id="hover">WINNERS</h1>
-            </div>
-
-            <model-viewer src="./assets/model-viewer/car.glb" ar ar-modes="webxr scene-viewer quick-look" auto-rotate
-                disable-tap camera-controls poster="./assets/model-viewer/poster.webp" shadow-intensity="2"
-                camera-orbit="-125.2deg 70.3deg 14.02m" field-of-view="30deg" min-camera-orbit="auto 70deg 14.02m"
-                max-camera-orbit="auto 70deg auto" min-field-of-view="30deg" interaction-prompt="none"
-                style="background-color: unset;">
-            </model-viewer>
+    <div id="title-section">
+        <div id="title">
+            <h1>LONDON NORTH</h1>
+            <h1>2022 - 23 ENTRY</h1>
+            <h1 id="hover">WINNERS</h1>
         </div>
+
+        <model-viewer src="./assets/model-viewer/car.glb" ar ar-modes="webxr scene-viewer quick-look" auto-rotate
+            disable-tap camera-controls poster="./assets/model-viewer/poster.webp" shadow-intensity="2"
+            camera-orbit="-125.2deg 70.3deg 14.02m" field-of-view="30deg" min-camera-orbit="auto 70deg 14.02m"
+            max-camera-orbit="auto 70deg auto" min-field-of-view="30deg" interaction-prompt="none"
+            style="background-color: unset;">
+        </model-viewer>
     </div>
     <div class="the-team">
         <h2>The Team</h2>
@@ -134,13 +130,6 @@
             <a href="https://f1inschools.com" target="_blank" id="read-more">Read More</a>
         </div>
     </div>
-
-    <script>
-        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-        particlesJS.load('particles-js', './assets/particlesjs-config.json', function () {
-            console.log('callback - particles.js config loaded');
-        });
-    </script>
 </body>
 
 </html>

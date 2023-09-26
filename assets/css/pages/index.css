@@ -2,23 +2,11 @@ body {
     background: #0e0e0e;
 }
 
-#particles-js {
-    display: grid;
-    grid-template-columns: 1fr;
-    height: 600px;
-    margin: 2rem 0rem 2rem 2rem;
-}
-
-#particles-js>* {
-    grid-row-start: 1;
-    grid-column-start: 1;
-}
-
 #title-section {
     display: flex;
     align-items: center;
-    z-index: 1000;
-    pointer-events: none;
+    height: 600px;
+    padding: 2rem 0rem 2rem 2rem;
 }
 
 #title {
