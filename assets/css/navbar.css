@@ -51,6 +51,11 @@ header {
 .nav-links li {
     display: inline-block;
     margin-right: 20px;
+    transition: transform 0.2s;
+}
+
+.nav-links li:hover {
+    transform: scale(1.05);
 }
 
 .nav-links li a {
