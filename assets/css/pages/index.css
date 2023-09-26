@@ -2,11 +2,23 @@ body {
     background: #0e0e0e;
 }
 
+#particles-js {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 600px;
+    margin: 2rem 0rem 2rem 2rem;
+}
+
+#particles-js>* {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
 #title-section {
     display: flex;
     align-items: center;
-    height: 600px;
-    padding: 2rem 0rem 2rem 2rem;
+    z-index: 1000;
+    pointer-events: none;
 }
 
 #title {
@@ -20,6 +32,7 @@ body {
     display: block;
     padding-left: 10px;
     text-align: right;
+    pointer-events: initial;
 }
 
 h2 {
@@ -34,6 +47,7 @@ model-viewer {
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: initial;
 }
 
 #title #hover {
@@ -192,6 +206,10 @@ model-viewer {
 }
 
 @media (max-width: 1100px) {
+    #particles-js {
+        height: auto;
+    }
+
     #title-section {
         flex-direction: column;
         height: auto;
