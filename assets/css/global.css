@@ -1,17 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;600&display=swap");
+
+:root {
+    --accent: #474ba5;
+    --opposite-accent: #9195ff;
+    --text-color: #0E0E0E;
+    --opposite-text-color: #fff;
+}
 
 * {
     box-sizing: border-box;
-    color: var(--opposite-color-accent);
     font-family: Noto Sans, sans-serif;
-    margin: 0;
-    padding: 0;
     scroll-behavior: smooth;
 }
 
 html,
 body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -26,4 +35,8 @@ h2 {
 
 p {
     text-align: justify;
+}
+
+a {
+    color: var(--accent);
 }

@@ -1,7 +1,3 @@
-body {
-    background: #0e0e0e;
-}
-
 #title-section {
     display: flex;
     align-items: center;
@@ -16,7 +12,6 @@ body {
 #title h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: white;
     display: block;
     padding-left: 10px;
     text-align: right;
@@ -25,7 +20,6 @@ body {
 
 h2 {
     font-size: 2.5rem;
-    color: white;
     text-align: center;
 }
 
@@ -41,6 +35,7 @@ model-viewer {
 #title #hover {
     background: linear-gradient(to left, #4245A0 50%, #592087 50%) right;
     background-size: 200%;
+    color: var(--opposite-text-color);
     transition: .5s ease-out;
 }
 
@@ -52,6 +47,11 @@ model-viewer {
 
 #the-team {
     height: 250px;
+}
+
+.card-container a {
+    text-decoration: none;
+    color: var(--opposite-text-color);
 }
 
 .card-container {
@@ -67,7 +67,7 @@ model-viewer {
 .card {
     /* Remove max-width property */
     height: 300px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
     transition: 0.3s ease-in-out;
@@ -87,7 +87,6 @@ model-viewer {
         flex: 1;
         max-width: 300px;
         height: 300px;
-        background: rgba(255, 255, 255, 0.2);
         position: relative;
         overflow: hidden;
         transition: 0.3s ease-in-out;
@@ -131,7 +130,6 @@ model-viewer {
     flex-direction: column;
     justify-content: flex-end;
     padding: 20px;
-    color: #fff;
     transition: 0.3s ease-in-out;
     background: rgba(0, 0, 0, 0.5);
 }
@@ -158,6 +156,7 @@ model-viewer {
 
 #what-is-f1-in-schools {
     background-image: linear-gradient(to right, #4245A0, #592087);
+    color: var(--opposite-text-color);
     display: flex;
 }
 
@@ -167,7 +166,6 @@ model-viewer {
 }
 
 #what-is-f1-in-schools #right {
-    color: white;
     padding: 10rem 5rem;
     width: 50%;
 }
@@ -176,9 +174,7 @@ model-viewer {
     display: inline-block;
     padding: 0.25rem 0.5rem;
     background-color: rgba(255, 255, 255, 0.4);
-    /* Frosted glass background color */
-    color: black;
-    /* Dark text color */
+    color: var(--opposite-text-color);
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
@@ -189,8 +185,12 @@ model-viewer {
 
 /* Hover effect */
 #what-is-f1-in-schools #read-more:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
     /* Slightly lighter background on hover */
+}
+
+#what-is-f1-in-schools sub a {
+    color: var(--opposite-accent);
 }
 
 @media (max-width: 1100px) {

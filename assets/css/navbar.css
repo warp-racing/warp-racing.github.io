@@ -1,12 +1,5 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
 header {
-    background: #0e0e0e;
-    color: white;
+    background: white;
     /* Frosted background */
     position: fixed;
     top: 0;
@@ -59,14 +52,14 @@ header {
 }
 
 .nav-links li a {
+    color: var(--text-color);
     text-decoration: none;
-    color: white;
     font-size: 1.25rem;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .nav-links li a#current {
-    color: #9195ff;
+    color: var(--accent);
 }
 
 /* Media query for mobile responsiveness */
