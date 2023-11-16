@@ -62,11 +62,10 @@ header {
     color: var(--accent);
 }
 
-/* Media query for mobile responsiveness */
 @media (max-width: 1100px) {
     .company-logo img {
         max-width: 30px;
-        /* Adjust the size of the logo for mobile */
+        margin-right: 0px;
     }
 
     .right {

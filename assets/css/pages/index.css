@@ -18,6 +18,62 @@
     pointer-events: initial;
 }
 
+#title h1 span {
+    background-image: linear-gradient(45deg,
+            var(--accent),
+            var(--opposite-accent),
+            #CA4246,
+            #E16541,
+            #E16541,
+            #F18F43,
+            #F18F43,
+            #8B9862,
+            #8B9862);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    background-size: 100%;
+    background-repeat: repeat;
+
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+}
+
+#title h1 span:hover {
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+
+    40% {
+        background-size: 650%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+
+
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+
+    80% {
+        background-size: 650%;
+    }
+
+    100% {
+        background-size: 650%;
+    }
+}
+
 h2 {
     font-size: 2.5rem;
     text-align: center;
@@ -183,10 +239,8 @@ model-viewer {
     margin: 10px 0px;
 }
 
-/* Hover effect */
 #what-is-f1-in-schools #read-more:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    /* Slightly lighter background on hover */
 }
 
 #what-is-f1-in-schools sub a {
