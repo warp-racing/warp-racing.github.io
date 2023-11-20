@@ -1,3 +1,26 @@
 #cover {
     background-image: url(../../img/pages/about-us.png);
 }
+
+#we-are-warp {
+    background-image: linear-gradient(to right, #4245A0, #592087);
+    color: var(--opposite-text-color);
+}
+
+#we-are-warp #left {
+    background: url(../../img/pages/about-us-team.webp) no-repeat center center/cover;
+}
+
+#we-are-warp #right {
+    padding: 10rem 5rem;
+}
+
+@media (max-width: 1100px) {
+    #we-are-warp #left {
+        height: 400px;
+    }
+
+    #we-are-warp #right {
+        padding: 2.5rem 2rem;
+    }
+}

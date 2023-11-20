@@ -79,3 +79,26 @@ a {
         height: calc(100vh - 250px);
     }
 }
+
+.side-by-side {
+    display: flex;
+}
+
+.side-by-side #left {
+    width: 50%;
+}
+
+.side-by-side #right {
+    width: 50%;
+}
+
+@media (max-width: 1100px) {
+    .side-by-side {
+        flex-direction: column;
+    }
+
+    .side-by.side #left,
+    .side-by.side #right {
+        width: 100%;
+    }
+}

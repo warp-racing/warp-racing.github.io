@@ -213,17 +213,14 @@ model-viewer {
 #what-is-f1-in-schools {
     background-image: linear-gradient(to right, #4245A0, #592087);
     color: var(--opposite-text-color);
-    display: flex;
 }
 
 #what-is-f1-in-schools #left {
     background: url(../../img/trophy.webp) no-repeat center center/cover;
-    width: 50%;
 }
 
 #what-is-f1-in-schools #right {
     padding: 10rem 5rem;
-    width: 50%;
 }
 
 #what-is-f1-in-schools #read-more {
@@ -275,17 +272,11 @@ model-viewer {
         flex-direction: column;
     }
 
-    #what-is-f1-in-schools {
-        flex-direction: column;
-    }
-
     #what-is-f1-in-schools #left {
         height: 400px;
-        width: 100%;
     }
 
     #what-is-f1-in-schools #right {
-        width: 100%;
         padding: 2.5rem 2rem;
     }
 }
