@@ -3,6 +3,13 @@
     align-items: center;
     height: 600px;
     padding: 2rem 0rem 2rem 2rem;
+
+    background-image: url(../../img/pages/index.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
 }
 
 #title {
@@ -10,12 +17,12 @@
 }
 
 #title h1 {
+    color: white;
     font-size: 4rem;
     margin-bottom: 1rem;
     display: block;
     padding-left: 10px;
     text-align: right;
-    pointer-events: initial;
 }
 
 #title h1.big-text {
@@ -88,7 +95,6 @@ model-viewer {
     display: flex;
     justify-content: center;
     align-items: center;
-    pointer-events: initial;
 }
 
 #title #hover {
@@ -257,7 +263,7 @@ model-viewer {
 
     #title-section {
         flex-direction: column;
-        height: auto;
+        height: 700px;
         padding: 2rem;
     }
 
