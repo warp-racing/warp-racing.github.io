@@ -74,6 +74,7 @@ header {
 
     header {
         position: relative;
+        height: 250px;
     }
 
     .nav-links {

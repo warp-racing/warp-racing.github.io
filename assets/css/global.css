@@ -45,3 +45,30 @@ p {
 a {
     color: var(--accent);
 }
+
+#cover {
+    align-items: center;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
+    color: white;
+    display: flex;
+    justify-content: center
+}
+
+#cover #cover-text {
+    background-color: none;
+    filter: none
+}
+
+#cover #cover-text h1 {
+    font-size: 100px;
+    text-align: center;
+    text-decoration: none
+}
+
+#cover #cover-text p {
+    font-size: 25px;
+    text-align: center
+}
