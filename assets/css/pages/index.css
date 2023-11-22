@@ -25,16 +25,7 @@
 }
 
 .gradient-text {
-    background-image: linear-gradient(45deg,
-            var(--accent),
-            var(--opposite-accent),
-            #CA4246,
-            #E16541,
-            #E16541,
-            #F18F43,
-            #F18F43,
-            #8B9862,
-            #8B9862);
+    background-image: linear-gradient(45deg, var(--opposite-accent), var(--accent), #CA4246);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -43,41 +34,6 @@
 
     background-size: 100%;
     background-repeat: repeat;
-
-    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
-}
-
-.gradient-text:hover {
-    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
-}
-
-@keyframes rainbow-text-simple-animation-rev {
-    0% {
-        background-size: 650%;
-    }
-
-    40% {
-        background-size: 650%;
-    }
-
-    100% {
-        background-size: 100%;
-    }
-}
-
-
-@keyframes rainbow-text-simple-animation {
-    0% {
-        background-size: 100%;
-    }
-
-    80% {
-        background-size: 650%;
-    }
-
-    100% {
-        background-size: 650%;
-    }
 }
 
 model-viewer {
