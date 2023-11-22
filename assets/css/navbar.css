@@ -25,8 +25,8 @@ header {
 }
 
 .company-logo img {
-    max-width: 40px;
-    /* Adjust the size of the logo */
+    width: 40px;
+    height: auto;
     margin-right: 10px;
 }
 
