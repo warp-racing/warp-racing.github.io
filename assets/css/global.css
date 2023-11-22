@@ -97,8 +97,8 @@ a {
         flex-direction: column;
     }
 
-    .side-by.side #left,
-    .side-by.side #right {
+    .side-by-side #left,
+    .side-by-side #right {
         width: 100%;
     }
 }

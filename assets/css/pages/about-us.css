@@ -3,7 +3,7 @@
 }
 
 #we-are-warp {
-    background-image: linear-gradient(to right, #4245A0, #592087);
+    background-image: linear-gradient(to right, var(--opposite-accent), var(--accent));
     color: var(--opposite-text-color);
 }
 
