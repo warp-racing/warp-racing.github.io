@@ -92,6 +92,11 @@ a {
     width: 50%;
 }
 
+.side-by-side #right h2 {
+    margin-top: 0;
+
+}
+
 @media (max-width: 1100px) {
     .side-by-side {
         flex-direction: column;
@@ -101,4 +106,21 @@ a {
     .side-by-side #right {
         width: 100%;
     }
+}
+
+#read-more {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: var(--opposite-text-color);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: 10px 0px;
+}
+
+#read-more:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
