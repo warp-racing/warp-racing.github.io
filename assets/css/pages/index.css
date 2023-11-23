@@ -61,7 +61,7 @@ model-viewer {
     height: 250px;
 }
 
-.card-container a {
+.card-container a.card-a {
     text-decoration: none;
     color: var(--opposite-text-color);
 }

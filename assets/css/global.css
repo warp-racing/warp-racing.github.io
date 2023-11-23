@@ -111,7 +111,7 @@ a {
     }
 }
 
-#read-more {
+.read-more {
     display: inline-block;
     padding: 0.25rem 0.5rem;
     background-color: rgba(255, 255, 255, 0.4);
@@ -124,12 +124,12 @@ a {
     margin: 10px 0px;
 }
 
-#read-more:hover {
+.read-more:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 1100px) {
-    #read-more {
+    .read-more {
         display: table;
         margin: 0 auto;
         text-align: center;
