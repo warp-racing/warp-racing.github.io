@@ -164,12 +164,14 @@ model-viewer {
 
 .card-text h3,
 .card-text p {
-    margin: 0;
+    margin: 0px;
 }
 
 #what-is-f1-in-schools {
     background-image: linear-gradient(to right, #4245A0, #592087);
     color: var(--opposite-text-color);
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #what-is-f1-in-schools #left {

@@ -85,15 +85,24 @@ a {
 }
 
 .side-by-side {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.side-by-side #left,
+.side-by-side #right {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 50%;
 }
 
 .side-by-side #left {
-    width: 50%;
+    border-radius: 10px 0px 0px 10px;
 }
 
 .side-by-side #right {
-    width: 50%;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .side-by-side h2 {
@@ -107,6 +116,7 @@ a {
 
     .side-by-side #left,
     .side-by-side #right {
+        border-radius: 10px;
         width: 100%;
     }
 }
