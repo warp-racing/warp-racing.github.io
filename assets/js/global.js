@@ -1,4 +1,5 @@
 let copyright = document.getElementById("copyright");
+let navbar = document.getElementsByClassName("navbar")[0];
 
 function getWidth() {
     return Math.max(
@@ -21,7 +22,7 @@ function scrollToElement() {
 
     const elementY = window.scrollY + document.getElementById(elementID).getBoundingClientRect().top;
 
-    window.scrollTo(0, getWidth() < 1000 ? elementY : elementY - navbar.offsetHeight);
+    window.scrollTo(0, getWidth() < 1100 ? elementY : elementY - navbar.offsetHeight);
 }
 
 function cardFixerForMobile() {
