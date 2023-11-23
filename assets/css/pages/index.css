@@ -64,6 +64,7 @@ model-viewer {
 .card-container a.card-a {
     text-decoration: none;
     color: var(--opposite-text-color);
+    cursor: default;
 }
 
 .card-container {
