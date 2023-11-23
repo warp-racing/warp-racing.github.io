@@ -24,3 +24,26 @@
         padding: 2.5rem 2rem;
     }
 }
+
+#our-achievements {
+    background-image: linear-gradient(to right, #4245A0, #592087);
+    color: var(--opposite-text-color);
+}
+
+#our-achievements #right {
+    background: url(../../img/pages/about-us-achievements.png) no-repeat center center/cover;
+}
+
+#our-achievements #left {
+    padding: 10rem 5rem;
+}
+
+@media (max-width: 1100px) {
+    #our-achievements #right {
+        height: 400px;
+    }
+
+    #our-achievements #left {
+        padding: 2.5rem 2rem;
+    }
+}

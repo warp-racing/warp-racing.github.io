@@ -78,6 +78,10 @@ a {
     #cover {
         height: calc(100vh - 250px);
     }
+
+    p {
+        text-align: center;
+    }
 }
 
 .side-by-side {
@@ -92,9 +96,8 @@ a {
     width: 50%;
 }
 
-.side-by-side #right h2 {
+.side-by-side h2 {
     margin-top: 0;
-
 }
 
 @media (max-width: 1100px) {
@@ -123,4 +126,12 @@ a {
 
 #read-more:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1100px) {
+    #read-more {
+        display: table;
+        margin: 0 auto;
+        text-align: center;
+    }
 }

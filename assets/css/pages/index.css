@@ -184,13 +184,9 @@ model-viewer {
 }
 
 #about-us {
-    background-image: linear-gradient(to right, var(--opposite-accent), var(--accent));
+    background-image: linear-gradient(45deg, var(--accent), var(--opposite-accent));
     color: var(--opposite-text-color);
     padding: 1rem 5rem;
-}
-
-#about-us h2 {
-    margin-top: 0;
 }
 
 @media (max-width: 1100px) {
