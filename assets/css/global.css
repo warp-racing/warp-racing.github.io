@@ -51,7 +51,6 @@ a {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
     color: white;
     display: flex;
     height: 100vh;
@@ -88,6 +87,7 @@ a {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     margin: 10px;
+    margin-bottom: 0px;
     border-radius: 10px;
 }
 
@@ -145,4 +145,11 @@ a {
         margin: 0 auto;
         text-align: center;
     }
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

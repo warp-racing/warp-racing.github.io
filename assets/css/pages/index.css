@@ -1,13 +1,13 @@
+.parallax {
+    background-image: url(../../img/pages/index.png);
+}
+
 #title-section {
     display: flex;
     align-items: center;
     padding: 2rem 0rem 2rem 2rem;
-
-    background-image: url(../../img/pages/index.png);
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    position: relative;
+    overflow: hidden;
     height: 100vh;
 }
 
@@ -31,7 +31,6 @@
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-
     background-size: 100%;
     background-repeat: repeat;
 }
@@ -187,7 +186,6 @@ model-viewer {
 }
 
 #about-us {
-    background-image: linear-gradient(45deg, var(--accent), var(--opposite-accent));
     color: var(--opposite-text-color);
     padding: 1rem 5rem;
 }

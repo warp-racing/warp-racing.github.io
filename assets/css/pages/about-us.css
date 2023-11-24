@@ -1,5 +1,6 @@
-#cover {
+.parallax {
     background-image: url(../../img/pages/about-us.png);
+    padding-bottom: 10px;
 }
 
 #we-are-warp {
