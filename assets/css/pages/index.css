@@ -115,10 +115,6 @@ model-viewer {
     transition: opacity 0.3s ease-in-out;
 }
 
-.card:hover {
-    transform: scale(1.1);
-}
-
 .card:hover::before {
     opacity: 1;
 }
