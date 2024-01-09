@@ -1,9 +1,9 @@
 #footer {
     align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px
+    padding: 5px 20px
 }
 
 #footer ul {
@@ -14,10 +14,14 @@
 }
 
 #footer ul li {
-    padding-left: 20px
+    padding: 0px 10px
 }
 
-#footer ul li img {
+#footer ul li a {
+    display: flex;
+}
+
+#footer ul li a img {
     height: auto;
     width: 30px
 }
@@ -28,7 +32,7 @@
     }
 
     #footer #copyright {
-        padding: 10px 0
+        padding: 0px 0px;
     }
 
     #footer ul {
@@ -36,6 +40,6 @@
     }
 
     #footer ul li {
-        padding: 5px 0 0
+        padding: 5px 0px
     }
 }

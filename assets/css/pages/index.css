@@ -1,5 +1,54 @@
-#cover {
-    background-image: url(../../img/index.webp)
+#title-section {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-image: url(../../img/index.png);
+}
+
+#title {
+    width: 50%;
+}
+
+#title h1 {
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: block;
+    padding-left: 10px;
+    text-align: right;
+}
+
+.gradient-text {
+    background-image: linear-gradient(45deg, var(--accent-darker), var(--accent), #CA4246);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+model-viewer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title #hover {
+    background: linear-gradient(to left, #4245A0 50%, #592087 50%) right;
+    background-size: 200%;
+    color: var(--opposite-text-color);
+    transition: .5s ease-out;
+}
+
+#title #hover:hover {
+    background-position: left;
 }
 
 #meet-the-team #card {

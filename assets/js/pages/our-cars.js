@@ -3,7 +3,7 @@ let entryClassCarImage = document.getElementById('entry-class-car-image');
 var entryClassSlide = 0;
 
 function entryClassCarSlider() {
-    if (entryClassSlide++ == 3) {
+    if (entryClassSlide++ == 4) {
         entryClassSlide = 1;
     }
 

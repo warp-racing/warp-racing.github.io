@@ -16,6 +16,7 @@
     <link href="assets/css/pages/index.css" rel="stylesheet">
 
     <script defer src="assets/js/global.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -49,11 +50,20 @@
         </div>
     </div>
 
-    <div id="cover" class="cover">
-        <div id="cover-text">
-            <h1>WΔRP</h1>
-            <p>Defining speed</p>
+    <div id="title-section" class="cover">
+        <div id="title">
+            <h1>LONDON NORTH</h1>
+            <h1>
+                <span class="gradient-text">2022 - 23 ENTRY</span>
+            </h1>
+            <h1 id="hover">WINNERS</h1>
         </div>
+
+        <model-viewer src="./assets/model-viewer/car.glb" auto-rotate disable-tap disable-zoom camera-controls
+            poster="./assets/model-viewer/poster.webp" shadow-intensity="2" camera-orbit="-125.2deg 70.3deg 14.02m"
+            field-of-view="30deg" min-camera-orbit="auto 70deg 14.02m" max-camera-orbit="auto 70deg auto"
+            min-field-of-view="30deg" interaction-prompt="none" style="background-color: unset;">
+        </model-viewer>
     </div>
 
     <div id="about-us" class="middle">
@@ -71,7 +81,7 @@
         <h2>Meet the Team</h2>
 
         <div id="card">
-            <img alt="Team Picture" src="assets/img/team/cover.webp">
+            <img alt="Team Picture" src="assets/img/team/cover.png">
         </div>
 
         <div id="members">
@@ -133,7 +143,7 @@
 
     <div id="footer">
         <p id="copyright">©<a href="https://github.com/warpf1s/warpf1s.github.io/blob/main/LICENSE.md"
-                target="_blank">skifli</a>
+                target="_blank">WARP</a>
             2022 - {current_year}. All rights
             reserved.</p>
 
