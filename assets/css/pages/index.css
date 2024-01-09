@@ -30,6 +30,7 @@
     -moz-text-fill-color: transparent;
     background-size: 100%;
     background-repeat: repeat;
+    font-weight: 600;
 }
 
 model-viewer {
