@@ -58,6 +58,12 @@ function scrollToElement() {
 }
 
 window.addEventListener("load", function () {
+    let pageDomain = window.location.hostname;
+
+    if (pageDomain != "localhost" && (pageDomain != "warp-racing.com")) {
+        this.window.location.href = "https://warp-racing.com";
+    }
+
     copyright.innerHTML = copyright.innerHTML.replace("{current_year}", new Date().getFullYear());
 
     let cookieConsent = getCookie('cookieConsent');
