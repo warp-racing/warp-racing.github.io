@@ -7,37 +7,50 @@
     <meta name="viewport" content="initial-scale=1.0">
 
     <title>WΔRP | Home</title>
-    <link rel="icon" href="assets/img/logo.webp" type="image/png">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/pages/index.css">
+    <link rel="icon" type="image/x-webp" href="assets/img/logo.webp">
+
+    <link href="assets/css/cookies.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/global.css" rel="stylesheet">
+    <link href="assets/css/navbar.css" rel="stylesheet">
+    <link href="assets/css/pages/index.css" rel="stylesheet">
 
     <script defer src="assets/js/global.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="left">
-                <div class="company-logo">
-                    <img src="./assets/img/logo.webp" alt="Logo">
-                </div>
-            </div>
-            <div class="right">
-                <ul class="nav-links">
-                    <li><a href="#" id="current">Home</a></li>
-                    <li><a href="./about-us/">About Us</a></li>
-                    <li><a href="./our-journey/">Our Journey</a></li>
-                    <li><a href="./our-cars/">Our Cars</a></li>
-                    <li><a href="./sponsors/">Sponsors</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <div id="navbar">
+        <img id="logo" src="assets/img/logo.webp" alt="Logo">
 
-    <div id="title-section" class="parallax">
+        <div id="items">
+            <ul>
+                <li>
+                    <a id="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about-us/">About Us</a>
+                </li>
+
+                <li>
+                    <a href="our-journey/">Our Journey</a>
+                </li>
+
+                <li>
+                    <a href="our-cars/">Our Cars</a>
+                </li>
+
+                <li>
+                    <a href="sponsors/">Sponsors</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="title-section" class="cover">
         <div id="title">
             <h1>LONDON NORTH</h1>
             <h1>
@@ -53,125 +66,84 @@
         </model-viewer>
     </div>
 
-    <div class="the-team">
-        <h2>The Team</h2>
-
-        <div class="card-container">
-            <a href="./about-us/?id=abhinav-malladi" class="card-a">
-                <div class="card">
-                    <img src="assets/img/team/abhinav-malladi.png" alt="Abhinav Malladi">
-                    <div class="card-text">
-                        <h3>Abhinav Malladi</h3>
-                        <p>Joined: 2021 - 22 Season (Team didn't compete).<br>
-                            Roles: Team Manager / Engineer.
-                        <p class="read-more" style="display: table; margin: 1rem auto 0rem auto;">Read
-                            More</p>
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="./about-us/?id=aneeq-weerasinghe" class="card-a">
-                <div class="card">
-                    <img src="assets/img/team/aneeq-weerasinghe.png" alt="Aneeq Weerasinghe">
-                    <div class="card-text">
-                        <h3>Aneeq Weerasinghe</h3>
-                        <p>Joined: 2021 - 22 Season (Team didn't compete).<br>
-                            Roles: Sponsorship & Marketing Manager.
-                        <p class="read-more" style="display: table; margin: 1rem auto 0rem auto;">Read
-                            More</p>
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="./about-us/?id=michael-qu" class="card-a">
-                <div class="card">
-                    <img src="assets/img/team/michael-qu.png" alt="Michael Qu">
-                    <div class="card-text">
-                        <h3>Michael Qu</h3>
-                        <p>Joined: After end of 2022 - 23 Season.<br>
-                            Roles: Portfolio / Marketing.
-                        <p class="read-more" style="display: table; margin: 1rem auto 0rem auto;">Read
-                            More</p>
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="./about-us/?id=neal-ye" class="card-a">
-                <div class="card">
-                    <img src="assets/img/team/neal-ye.png" alt="Neal Ye">
-                    <div class="card-text">
-                        <h3>Neal Ye</h3>
-                        <p>Joined: 2021 - 22 Season (Team didn't compete).<br>
-                            Roles: Engineer / Graphics Manager.
-                        <p class="read-more" style="display: table; margin: 1rem auto 0rem auto;">Read
-                            More</p>
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="./about-us/?id=thomas-howcroft" class="card-a">
-                <div class="card">
-                    <img src="assets/img/team/thomas-howcroft.png" alt="Michael Qu">
-                    <div class="card-text">
-                        <h3>Thomas Howcroft</h3>
-                        <p>Joined: After end of 2022 - 23 Season.<br>
-                            Roles: Finance Manager / Graphics.
-                        <p class="read-more" style="display: table; margin: 1rem auto 0rem auto;">Read
-                            More</p>
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <div id="about-us" class="parallax">
+    <div id="about-us" class="middle">
         <h2>About Us</h2>
 
-        <p>
-            WΔRP is a team of five 14-15 year-old boys from Saint Olave's Grammar School, who are competing in the F1 in
-            Schools competition as a dev class team. We are a team of leaders, innovators, and designers who are ready
-            to compete in this year's competition. We love STEM based activities, since we believe they provide
-            valuable, real-life experience through hands-on-learning.
-        </p>
+        <p>WΔRP is a team of five 13-14 year-old boys from Saint Olave's Grammar School, who are competing in the F1 in
+            Schools competition as a dev class team. We are a team of leaders, innovators, and designers who are
+            ready to compete in this year's competition. We love STEM based activities, since we believe they provide
+            valuable, real-life experience through hands-on-learning. <a href="about-us/?id=we-are-warp"
+                target="_blank">Read
+                More...</a></p>
+    </div>
 
-        <a href="about-us/?id=we-are-warp" class="read-more">Read More</a>
+    <div id="meet-the-team" class="middle">
+        <h2>Meet the Team</h2>
 
-        <div id="what-is-f1-in-schools" class="side-by-side">
-            <div id="left">
-
-            </div>
-
-            <div id="right">
-                <h2>What is F1 in Schools?</h2>
-
-                <p>The F1 in Schools challenge is a STEM based, team challenge, targeted at all students between the
-                    ages of
-                    9
-                    and
-                    19. The event provides the participating teams with the opportunity to use CAD / CAM software to
-                    design,
-                    analyse, manufacture, test, and eventually race miniature compressed air powered cars. The cars are
-                    raced on
-                    a
-                    20m track, and the teams are not only judged by the speed of their car, but also on their
-                    portfolios,
-                    marketing,
-                    verbal presentations, pit display, and more.</p>
-                <p>
-                    <sub>The relevant image is copyrighted by
-                        <a href="https://www.f1inschools.co.uk/">F1 in Schools</a>.
-                    </sub>
-                </p>
-
-                <a href="https://f1inschools.com" target="_blank" class="read-more">Read More</a>
-            </div>
+        <div id="card">
+            <img alt="Team Picture" src="assets/img/team/cover.png">
         </div>
 
+        <div id="members">
+            <div id="member">
+                <h3>Abhinav Malladi</h3>
+
+                <p>Joined: 2021 - 22 Season (Team didn't compete).<br>Roles: Team Manager / Engineer.<br><a
+                        href="about-us/?id=abhinav-malladi" target="_blank">Find
+                        out more...</a></p>
+            </div>
+
+            <div id="member">
+                <h3>Aneeq Weerasinghe</h3>
+
+                <p>Joined: 2021 - 22 Season (Team didn't compete).<br>Roles: Sponsorship & Marketing Manager.<br><a
+                        href="about-us/?id=aneeq-weerasinghe" target="_blank">Find
+                        out more...</a></p>
+            </div>
+
+            <div id="member">
+                <h3>Michael Qu</h3>
+
+                <p>Joined: After end of 2022 - 23 Season.<br>Roles: Portfolio / Marketing.<br><a
+                        href="about-us/?id=michael-qu" target="_blank">Find out more...</a></p>
+            </div>
+
+            <div id="member">
+                <h3>Neal Ye</h3>
+
+                <p>Joined: 2021 - 22 Season (Team didn't compete).<br>Roles: Engineer / Graphics Manager.<br><a
+                        href="about-us/?id=neal-ye" target="_blank">Find
+                        out more...</a></p>
+            </div>
+
+            <div id="member">
+                <h3>Thomas Howcroft</h3>
+
+                <p>Joined: After end of 2022 - 23 Season.<br>Roles: Finance Manager / Graphics.<br><a
+                        href="about-us/?id=thomas-howcroft" target="_blank">Find
+                        out more...</a></p>
+            </div>
+        </div>
     </div>
+
+    <div id="f1-in-schools" class="middle">
+        <h2>F1 in Schools</h2>
+
+        <p>The F1 in Schools challenge is a STEM based, team challenge, targeted at all students between the ages of
+            9
+            and 19. The event provides the participating teams with the opportunity to use CAD / CAM software to
+            design,
+            analyse, manufacture, test, and eventually race miniature compressed air powered cars. The cars are
+            raced on
+            a 20m track, and the teams are not only judged by the speed of their car, but also on their portfolios,
+            marketing, verbal presentations, pit display, and more. <a href="https://www.f1inschools.com/"
+                target="_blank">Learn
+                More...</a></p>
+    </div>
+
     <div id="footer">
         <p id="copyright">©<a href="https://github.com/warpf1s/warpf1s.github.io/blob/main/LICENSE.md"
-                target="_blank">WΔRP</a>
+                target="_blank">WARP</a>
             2022 - {current_year}. All rights
             reserved.</p>
 
@@ -205,6 +177,22 @@
                         src="assets/img/socials/threads.svg"></a>
             </li>
         </ul>
+    </div>
+
+    <div id="cookie-consent-banner">
+        <div class="middle">
+            <h2>WE USE COOKIES &#127850;</h2>
+            <p>We use cookies to analyse traffic to our site. The
+                services we use for analytics may combine it with other information that you've provided to them, or
+                that they've collected from your use of their services. You can accept or deny the use of analytics
+                cookies on our website below. However functional cookies, like those for remembering the
+                site theme, cannot be disabled.</p>
+
+            <br>
+
+            <button id="accept-all-cookies">Accept All Cookies</button>
+            <button id="only-functional-cookies">Only Functional</button>
+        </div>
     </div>
 </body>
 
