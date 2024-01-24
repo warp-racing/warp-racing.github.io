@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;600&display=swap");
 
 :root {
     --accent: #9195ff;
@@ -39,4 +39,27 @@ html[theme="dark"] {
 body {
     background-color: var(--background-color);
     scroll-behavior: smooth;
+}
+
+/* cover */
+
+.cover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
+    display: flex;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cover #cover-text h1 {
+    font-size: 2vw;
+}
+
+.cover #cover-text p {
+    font-size: 1vw;
 }

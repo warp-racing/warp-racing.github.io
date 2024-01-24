@@ -2,6 +2,13 @@ nav {
     box-shadow: 0 0 20px rgba(0, 0, 0, .15);
     padding: 0.5vw;
 
+    /* place on top */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--background-color);
+
     /* used to space out logo and links */
     display: flex;
     flex-direction: row;

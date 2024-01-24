@@ -11,6 +11,7 @@
 
     <link href="assets/css/global.css" rel="stylesheet">
     <link href="assets/css/navbar.css" rel="stylesheet">
+    <link href="assets/css/pages/index.css" rel="stylesheet">
 
     <script src="assets/js/global.js" defer></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
@@ -27,6 +28,22 @@
             <li><a href="./our-journey/">Our Journey</a></li>
         </ul>
     </nav>
+
+    <div id="title-section" class="cover">
+        <div id="title">
+            <h1>LONDON SOUTH</h1>
+            <h1>
+                <span class="gradient-text">2023 - 24 DEV</span>
+            </h1>
+            <h1 id="hover">WINNERS</h1>
+        </div>
+
+        <model-viewer src="./assets/model-viewer/car.glb" auto-rotate disable-tap disable-zoom camera-controls
+            poster="./assets/model-viewer/poster.webp" shadow-intensity="2" camera-orbit="-125.2deg 70.3deg 14.02m"
+            field-of-view="30deg" min-camera-orbit="auto 70deg 14.02m" max-camera-orbit="auto 70deg auto"
+            min-field-of-view="30deg" interaction-prompt="none" style="background-color: unset;">
+        </model-viewer>
+    </div>
 </body>
 
 </html>
