@@ -6,25 +6,27 @@
     --background-color: #fff;
     --color-accent: #3b3b40;
     --darker-color-accent: #000;
-    --opposite-color-accent: #000
+    --opposite-color-accent: #000;
+
+    --navbar-height-mobile: 180px;
 }
 
-html[theme="light"] {
+html[data-theme="light"] {
     --accent: #9195ff;
     --accent-darker: #474ba5;
     --background-color: #fff;
     --color-accent: #3b3b40;
     --darker-color-accent: #000;
-    --opposite-color-accent: #000
+    --opposite-color-accent: #000;
 }
 
-html[theme="dark"] {
+html[data-theme="dark"] {
     --accent: #9195ff;
     --accent-darker: #474ba5;
     --background-color: #1d1d1f;
     --color-accent: #3b3b40;
     --darker-color-accent: #000;
-    --opposite-color-accent: #fff
+    --opposite-color-accent: #fff;
 }
 
 * {
@@ -39,6 +41,62 @@ html[theme="dark"] {
 body {
     background-color: var(--background-color);
     scroll-behavior: smooth;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 200;
+
+    text-align: justify;
+}
+
+@media (max-width: 500px) {
+    p {
+        text-align: left;
+    }
+}
+
+/* gradient-text */
+
+.gradient-text {
+    background: linear-gradient(45deg, var(--accent-darker), var(--accent), #CA4246);
+    background-clip: text;
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+/* hover-colour */
+
+.hover-colour {
+    background: linear-gradient(to left, #4245A0 50%, #592087 50%) right;
+    background-size: 200%;
+
+    transition: .5s ease-out;
+}
+
+.hover-colour:hover {
+    background-position: left;
 }
 
 /* cover */
@@ -57,9 +115,46 @@ body {
 }
 
 .cover #cover-text h1 {
-    font-size: 2vw;
+    font-size: 50px
 }
 
 .cover #cover-text p {
-    font-size: 1vw;
+    font-size: 40px;
+}
+
+@media (max-width: 1000px) {
+    .cover {
+        height: calc(100vh - var(--navbar-height-mobile));
+    }
+}
+
+/* side-by-side */
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.side-by-side .left {
+    width: 50%;
+}
+
+.side-by-side .right {
+    flex: 1;
+}
+
+@media (max-width: 1000px) {
+    .side-by-side {
+        flex-direction: column;
+    }
+
+    .side-by-side .left {
+        width: 100%;
+    }
+
+    .side-by-side .right {
+        flex: 1;
+    }
 }
