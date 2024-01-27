@@ -18,7 +18,7 @@ nav {
     align-items: center;
 }
 
-nav #nav_logo {
+nav #nav-logo {
     flex-grow: 1;
 
     /* align in center vertically */
@@ -27,11 +27,11 @@ nav #nav_logo {
     align-items: center;
 }
 
-nav #nav_logo img {
+nav #nav-logo img {
     width: 24px;
 }
 
-nav #nav_links {
+nav #nav-links {
     list-style-type: none;
 
     /* align in center vertically and horizontally */
@@ -41,7 +41,7 @@ nav #nav_links {
     align-items: center;
 }
 
-nav #nav_links li {
+nav #nav-links li {
     margin-left: 10px;
     float: left;
 
@@ -50,11 +50,11 @@ nav #nav_links li {
     flex-direction: row;
 }
 
-nav #nav_links li:first-child {
+nav #nav-links li:first-child {
     margin-left: 0px;
 }
 
-nav #nav_links li a {
+nav #nav-links li a {
     font-weight: 200;
     font-size: 17px;
 
@@ -62,8 +62,8 @@ nav #nav_links li a {
     transition: color .2s ease-in-out;
 }
 
-nav #nav_links li a:hover,
-nav #nav_links li a#current {
+nav #nav-links li a:hover,
+nav #nav-links li a#current {
     color: var(--accent);
 }
 
@@ -75,15 +75,15 @@ nav #nav_links li a#current {
         height: var(--navbar-height-mobile);
     }
 
-    nav #nav_logo img {
+    nav #nav-logo img {
         width: 32px;
     }
 
-    nav #nav_links {
+    nav #nav-links {
         flex-direction: column;
     }
 
-    nav #nav_links li {
+    nav #nav-links li {
         margin-left: 0px;
         margin-top: 10px;
     }
