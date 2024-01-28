@@ -25,6 +25,9 @@ footer #footer-links a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    text-decoration: none;
+    font-size: 20px;
 }
 
 @media (max-width: 1000px) {
