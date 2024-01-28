@@ -161,6 +161,12 @@ model-viewer {
     margin-bottom: 10px;
 }
 
+.card .card-text h3,
+.card .card-text h4,
+.card .card-text p {
+    color: white;
+}
+
 @media (max-width: 1000px) {
     #our-members {
         padding: 25px 50px;
