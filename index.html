@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="assets/js/global.js" defer></script>
+    <script src="assets/js/pages/index.js" defer></script>
     <script defer src="https://eu.umami.is/script.js" data-website-id="34c0f985-73f0-4f79-a58e-33f5daa4d064"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -41,9 +42,10 @@
         </div>
 
         <model-viewer src="assets/model-viewer/car.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-            tone-mapping="commerce" poster="assets/model-viewer/poster.png" shadow-intensity="1" disable-tap auto-rotate
-            disable-zoom field-of-view="20deg" min-camera-orbit="auto 70deg 14.02m" max-camera-orbit="auto 70deg auto"
-            exposure="1" camera-orbit="42.71deg 70deg 14.02m" interaction-prompt="none">
+            tone-mapping="commerce" poster="assets/model-viewer/poster.png" shadow-intensity="1" disable-tap disable-pan
+            auto-rotate disable-zoom field-of-view="20deg" min-camera-orbit="auto 70deg 14.02m"
+            max-camera-orbit="auto 70deg 14.02m" exposure="1" camera-orbit="42.71deg 70deg 14.02m"
+            interaction-prompt="none">
             <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
             </div>
@@ -54,7 +56,6 @@
                 <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
             </div>
         </model-viewer>
-
     </div>
 
     <div class="side-by-side" id="we-are-team-warp">
