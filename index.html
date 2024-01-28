@@ -40,11 +40,21 @@
             <h1 class="hover-colour">WINNERS</h1>
         </div>
 
-        <model-viewer src="./assets/model-viewer/car.glb" auto-rotate disable-tap disable-zoom camera-controls
-            poster="./assets/model-viewer/poster.webp" shadow-intensity="2" camera-orbit="-125.2deg 70.3deg 14.02m"
-            field-of-view="30deg" min-camera-orbit="auto 70deg 14.02m" max-camera-orbit="auto 70deg auto"
-            min-field-of-view="30deg" interaction-prompt="none" style="background-color: unset;">
+        <model-viewer src="assets/model-viewer/car.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+            tone-mapping="commerce" poster="assets/model-viewer/poster.png" shadow-intensity="1" disable-tap auto-rotate
+            disable-zoom field-of-view="20deg" min-camera-orbit="auto 70deg 14.02m" max-camera-orbit="auto 70deg auto"
+            exposure="1" camera-orbit="42.71deg 70deg 14.02m" interaction-prompt="none">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            </div>
         </model-viewer>
+
     </div>
 
     <div class="side-by-side" id="we-are-team-warp">
