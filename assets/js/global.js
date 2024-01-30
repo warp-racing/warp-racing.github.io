@@ -2,7 +2,7 @@ const NAV_LINKS = [
     { "name": "Home", "url": "/" },
     { "name": "Blog", "url": "/blog/" },
     { "name": "Sponsors", "url": "/sponsors/" },
-    { "name": "Our Game", "url": "our-game/" },
+    { "name": "Our Game", "url": "/our-game/" },
 ]
 const PAGE_URL = window.location.href;
 const URL_PARSED = new URL(PAGE_URL);
@@ -33,7 +33,7 @@ function setupNavbar() {
 
         a.href = link.url;
         a.innerText = link.name;
-        
+
         if (link.url == URL_PARSED.pathname) {
             a.id = "current";
         }
@@ -53,7 +53,7 @@ window.addEventListener("load", function () {
     }
 
     copyright.innerHTML = copyright.innerHTML.replace("{current_year}", new Date().getFullYear());
-    
+
     updateTheme();
     setupNavbar();
 })
