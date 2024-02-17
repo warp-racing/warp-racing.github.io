@@ -1,84 +1,186 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap");
 
 :root {
+    --accent: #9195ff;
+    --accent-darker: #474ba5;
+    --background-color: #fff;
+    --color-accent: #3b3b40;
+    --darker-color-accent: #000;
+    --opposite-color-accent: #000;
+
+    --navbar-height-mobile: 180px;
+}
+
+html[data-theme="light"] {
+    --accent: #9195ff;
+    --accent-darker: #474ba5;
+    --background-color: #fff;
+    --color-accent: #3b3b40;
+    --darker-color-accent: #000;
+    --opposite-color-accent: #000;
+}
+
+html[data-theme="dark"] {
     --accent: #9195ff;
     --accent-darker: #474ba5;
     --background-color: #1d1d1f;
     --color-accent: #3b3b40;
     --darker-color-accent: #000;
-    --opposite-color-accent: #fff
+    --opposite-color-accent: #fff;
 }
 
 * {
     box-sizing: border-box;
     color: var(--opposite-color-accent);
+    margin: 0px;
+    padding: 0px;
+
     font-family: Noto Sans, sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth
 }
 
 body {
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
 }
 
 h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 20px;
     font-weight: 400;
-    margin-bottom: 15px
 }
 
-h2,
-h3 {
-    text-decoration: underline
-}
-
-h3 {
+h4 {
+    font-size: 15px;
     font-weight: 300;
-    margin-bottom: 10px
 }
 
 p {
-    text-align: justify
+    font-size: 15px;
+    font-weight: 300;
+
+    text-align: justify;
 }
 
-a {
-    color: var(--accent)
+@media (max-width: 500px) {
+    p {
+        text-align: left;
+    }
+}
+
+/* gradient-text */
+
+.gradient-text {
+    background: linear-gradient(45deg, var(--accent-darker), var(--accent), #CA4246);
+    background-clip: text;
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+/* hover-colour */
+
+.hover-colour {
+    background: linear-gradient(to left, #4245A0 50%, #592087 50%) right;
+    background-size: 200%;
+
+    transition: .5s ease-out;
+}
+
+.hover-colour:hover {
+    background-position: left;
+}
+
+/* cover */
+
+.cover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    background-image: url(../../img/covers/index.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
 }
 
 .cover {
-    align-items: center;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
     display: flex;
     height: 100vh;
-    justify-content: center
-}
 
-.cover #cover-text {
-    background-color: none;
-    filter: none
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .cover #cover-text h1 {
+    font-size: 50px
+}
+
+.cover #cover-text h1#warp {
     font-size: 100px;
-    text-align: center;
-    text-decoration: none
 }
 
-.cover #cover-text p {
-    font-size: 25px;
-    text-align: center
+.cover #cover-text h2 {
+    font-size: 30px;
 }
 
-.middle {
-    margin: 25px auto;
-    width: 50%
+@media (max-width: 1000px) {
+    .cover {
+        height: calc(100vh - var(--navbar-height-mobile));
+    }
 }
 
-@media only screen and (max-width:1000px) {
-    .middle {
-        width: 90%
+/* side-by-side */
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.side-by-side .left {
+    width: 50%;
+}
+
+.side-by-side .right {
+    flex: 1;
+}
+
+@media (max-width: 1000px) {
+    .side-by-side {
+        flex-direction: column;
+    }
+
+    .side-by-side .left {
+        width: 100%;
+    }
+
+    .side-by-side .right {
+        flex: 1;
     }
 }

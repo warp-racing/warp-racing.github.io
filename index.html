@@ -6,49 +6,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
 
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
     <title>WΔRP | Home</title>
-    <link rel="icon" type="image/x-webp" href="assets/img/logo.webp">
 
-    <link href="assets/css/cookies.css" rel="stylesheet">
-    <link href="assets/css/footer.css" rel="stylesheet">
     <link href="assets/css/global.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
     <link href="assets/css/navbar.css" rel="stylesheet">
     <link href="assets/css/pages/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script defer src="assets/js/global.js"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <script src="assets/js/global.js" defer></script>
+    <script defer src="https://eu.umami.is/script.js" data-website-id="34c0f985-73f0-4f79-a58e-33f5daa4d064"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 
 <body>
-    <div id="navbar">
-        <img id="logo" src="assets/img/logo.webp" alt="Logo">
-
-        <div id="items">
-            <ul>
-                <li>
-                    <a id="active">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about-us/">About Us</a>
-                </li>
-
-                <li>
-                    <a href="our-journey/">Our Journey</a>
-                </li>
-
-                <li>
-                    <a href="our-cars/">Our Cars</a>
-                </li>
-
-                <li>
-                    <a href="sponsors/">Sponsors</a>
-                </li>
-            </ul>
+    <nav>
+        <div id="nav-logo">
+            <img src="assets/img/logo.svg" alt="WΔRP logo">
         </div>
-    </div>
+
+        <ul id="nav-links">
+        </ul>
+    </nav>
 
     <div id="title-section" class="cover">
         <div id="title">
@@ -56,144 +36,119 @@
             <h1>
                 <span class="gradient-text">2023 - 24 DEV</span>
             </h1>
-            <h1 id="hover">WINNERS</h1>
+            <h1 class="hover-colour">WINNERS</h1>
         </div>
 
-        <model-viewer src="./assets/model-viewer/car.glb" auto-rotate disable-tap disable-zoom camera-controls
-            poster="./assets/model-viewer/poster.webp" shadow-intensity="2" camera-orbit="-125.2deg 70.3deg 14.02m"
-            field-of-view="30deg" min-camera-orbit="auto 70deg 14.02m" max-camera-orbit="auto 70deg auto"
-            min-field-of-view="30deg" interaction-prompt="none" style="background-color: unset;">
+        <model-viewer src="assets/model-viewer/car.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+            tone-mapping="commerce" poster="assets/model-viewer/poster.png" shadow-intensity="1" disable-tap disable-pan
+            auto-rotate disable-zoom min-camera-orbit="auto 70deg 14.02m" max-camera-orbit="auto 70deg 14.02m"
+            exposure="1" camera-orbit="42.71deg 70deg 14.02m" min-field-of-view="5deg" max-field-of-view="20deg"
+            interaction-prompt="none">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            </div>
         </model-viewer>
     </div>
 
-    <div id="about-us" class="middle">
-        <h2>About Us</h2>
-
-        <p>WΔRP is a team of five 14-15 year-old boys from Saint Olave's Grammar School, who are competing in the F1 in
-            Schools competition as a dev class team. We are a team of leaders, innovators, and designers who are
-            ready to compete in this year's competition. We love STEM based activities, since we believe they provide
-            valuable, real-life experience through hands-on-learning. <a href="about-us/?id=we-are-warp"
-                target="_blank">Read
-                More...</a></p>
-    </div>
-
-    <div id="meet-the-team" class="middle">
-        <h2>Meet the Team</h2>
-
-        <div id="card">
-            <img alt="Team Picture" src="assets/img/team/cover.png">
+    <div class="side-by-side" id="we-are-team-warp">
+        <div class="left">
+            <h2>WE ARE</h2>
+            <h2 class="hover-colour" style="background: var(--opposite-color-accent); color: var(--background-color)">
+                WΔRP
+            </h2>
         </div>
 
-        <div id="members">
-            <div id="member">
-                <h3>Abhinav Malladi</h3>
-
-                <p>Joined: 2021 - 22 Season (Team competed in internal competition).<br>Roles: Team Manager / Engineer.<br><a
-                        href="about-us/?id=abhinav-malladi" target="_blank">Find
-                        out more...</a></p>
-            </div>
-
-            <div id="member">
-                <h3>Aneeq Weerasinghe</h3>
-
-                <p>Joined: 2021 - 22 Season (Team competed in internal competition).<br>Roles: Sponsorship & Marketing Manager.<br><a
-                        href="about-us/?id=aneeq-weerasinghe" target="_blank">Find
-                        out more...</a></p>
-            </div>
-
-            <div id="member">
-                <h3>Michael Qu</h3>
-
-                <p>Joined: After end of 2022 - 23 Season.<br>Roles: Portfolio / Marketing.<br><a
-                        href="about-us/?id=michael-qu" target="_blank">Find out more...</a></p>
-            </div>
-
-            <div id="member">
-                <h3>Neal Ye</h3>
-
-                <p>Joined: 2021 - 22 Season (Team competed in internal competition).<br>Roles: Engineer / Graphics Manager.<br><a
-                        href="about-us/?id=neal-ye" target="_blank">Find
-                        out more...</a></p>
-            </div>
-
-            <div id="member">
-                <h3>Thomas Howcroft</h3>
-
-                <p>Joined: After end of 2022 - 23 Season.<br>Roles: Finance Manager / Graphics.<br><a
-                        href="about-us/?id=thomas-howcroft" target="_blank">Find
-                        out more...</a></p>
-            </div>
+        <div class="right">
+            <p>We are five 14-15 year-old boys from Saint Olave's Grammar School, who are competing in the F1 in Schools
+                competition as a dev class team. We are a team of leaders, innovators, and designers who love STEM based
+                activities, since we believe they provide valuable, real-life experience through hands-on-learning.
+            </p>
         </div>
     </div>
 
-    <div id="f1-in-schools" class="middle">
-        <h2>F1 in Schools</h2>
-
-        <p>The F1 in Schools challenge is a STEM based, team challenge, targeted at all students between the ages of
-            9
-            and 19. The event provides the participating teams with the opportunity to use CAD / CAM software to
-            design,
-            analyse, manufacture, test, and eventually race miniature compressed air powered cars. The cars are
-            raced on
-            a 20m track, and the teams are not only judged by the speed of their car, but also on their portfolios,
-            marketing, verbal presentations, pit display, and more. <a href="https://www.f1inschools.com/"
-                target="_blank">Learn
-                More...</a></p>
-    </div>
-
-    <div id="footer">
-        <p id="copyright">©<a href="https://github.com/warpf1s/warpf1s.github.io/blob/main/LICENSE.md"
-                target="_blank">WARP</a>
-            2022 - {current_year}. All rights
-            reserved.</p>
-
-        <ul>
-            <li>
-                <a href="https://www.youtube.com/@warp_racing_" target="_blank"><img
-                        alt="https://www.iconfinder.com/icons/1856390/circled_media_network_social_social_media_you_tube_youtube_icon"
-                        src="assets/img/socials/youtube.svg"></a>
-            </li>
-
-            <li>
-                <a href="https://www.instagram.com/warp_racing_" target="_blank"><img
-                        alt="https://www.iconfinder.com/icons/2142569/circle_colored_gradient_instagram_media_social_social_media_icon"
-                        src="assets/img/socials/instagram.svg"></a>
-            </li>
-
-            <li>
-                <a href="https://twitter.com/warp_racing_" target="_blank"><img
-                        alt="https://www.iconfinder.com/icons/294709/circle_twitter_icon"
-                        src="assets/img/socials/twitter.svg"></a>
-            </li>
-
-            <li>
-                <a href="https://www.facebook.com/warp.racing.fb" target="_blank"><img
-                        alt="https://www.iconfinder.com/icons/317752/facebook_social_media_social_icon"
-                        src="assets/img/socials/facebook.svg"></a>
-            </li>
-
-            <li>
-                <a href="https://threads.net/warp_racing_" target="_blank"><img alt="Threads"
-                        src="assets/img/socials/threads.svg"></a>
-            </li>
-        </ul>
-    </div>
-
-    <div id="cookie-consent-banner">
-        <div class="middle">
-            <h2>WE USE COOKIES &#127850;</h2>
-            <p>We use cookies to analyse traffic to our site. The
-                services we use for analytics may combine it with other information that you've provided to them, or
-                that they've collected from your use of their services. You can accept or deny the use of analytics
-                cookies on our website below. However functional cookies, like those for remembering the
-                site theme, cannot be disabled.</p>
-
-            <br>
-
-            <button id="accept-all-cookies">Accept All Cookies</button>
-            <button id="only-functional-cookies">Only Functional</button>
+    <div id="our-members">
+        <div class="card">
+            <img src="assets/img/team/abhinav.png" alt="Abhinav Malladi">
+            <div class="card-text">
+                <h3>ABHINAV MALLADI</h3>
+                <h4>Team Manager / Engineer</h4>
+                <p>When I first heard of the F1iS competition, I found it compelling and quickly formed a team. I never
+                    knew that it would become such a deep and demanding project at the start, but it is something that I
+                    truly enjoy and value. The feeling of winning is something you can't beat, and I want to help my
+                    team on its journey.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/img/team/aneeq.png" alt="Aneeq Weerasinghe">
+            <div class="card-text">
+                <h3>ANEEQ WEERASINGHE</h3>
+                <h4>Sponsorship & Marketing Manager</h4>
+                <p>F1iS has always sounded like an amazing stem project, and as an avid DT enthusiast I knew that it was
+                    the right decision to partake. Free time is also very hard to fill, and I knew F1iS would make that
+                    time well spent. I also love the adrenalin rush that comes with winning, and I hope to share that
+                    feeling with my teammates.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/img/team/michael.png" alt="Michael Qu">
+            <div class="card-text">
+                <h3>MICHAEL QU</h3>
+                <h4>Portfolio / Marketing</h4>
+                <p>F1iS seems like an awesome, incredibly fun, and difficult project that I can use to challenge myself.
+                    It gives me an opportunity to learn new skills and work to my best. Although my job is not on the
+                    car itself, I would love to see through its development and hopefully help throughout.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/img/team/neal.png" alt="Neal Ye">
+            <div class="card-text">
+                <h3>NEAL YE</h3>
+                <h4>Engineer / Graphics Manager</h4>
+                <p>I've always taken a liking towards motorsports (especially F1), and when I heard of F1iS I knew this
+                    was a perfect opportunity for me. The concept of racing a miniature car along a 20m track captured
+                    my interest immediately. Being a part of a team and seeing its growth throughout the years feels
+                    awesome!</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/img/team/thomas.png" alt="Thomas Howcroft">
+            <div class="card-text">
+                <h3>THOMAS HOWCROFT</h3>
+                <h4>Finance Manager / Graphics</h4>
+                <p>I enjoy various aspects of DT, and view F1iS as a way to challenge myself in a way that could benefit
+                    my career path. Although there are a few aspects of technology and engineering that I have explored
+                    in depth, F1iS is new to me, and I hope I can learn new things about it and help my team along our
+                    journey.</p>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <div id="footer-text">
+            <p id="copyright">©<a href="https://github.com/warp-racing/warp-racing.github.io/blob/main/LICENSE.md"
+                    target="_blank">WΔRP</a> 2022 - {current_year}. All rights reserved.</p>
+        </div>
+
+        <div id="footer-links">
+            <a href="https://www.instagram.com/warp_racing_" target="_blank">
+                <i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/warp_racing_" target="_blank">
+                <i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@warp_racing_" target="_blank">
+                <i class="fa fa-youtube-play"></i></a>
+            <a href="https://facebook.com/warp.racing.fb" target="_blank">
+                <i class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/warp-racing" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="mailto:contact@warp-racing.com" target="_blank">
+                <i class="fa fa-envelope"></i></a>
+        </div>
+    </footer>
 </body>
 
 </html>

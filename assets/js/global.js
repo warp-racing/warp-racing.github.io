@@ -1,107 +1,59 @@
-let cookieConsentBanner = document.getElementById('cookie-consent-banner');
+const NAV_LINKS = [
+    { "name": "Home", "url": "/" },
+    { "name": "Our Journey", "url": "/our-journey/" },
+    { "name": "Sponsors", "url": "/sponsors/" },
+    { "name": "Our Game", "url": "/our-game/" },
+]
+const PAGE_URL = window.location.href;
+const URL_PARSED = new URL(PAGE_URL);
 
-let acceptAllCookies = document.getElementById('accept-all-cookies');
-let onlyFunctionalCookies = document.getElementById('only-functional-cookies');
-
-let navbar = document.getElementById("navbar");
+let html = document.getElementsByTagName("html")[0];
+let nav = document.getElementsByTagName("nav")[0];
+let nav_links = nav.getElementsByTagName("ul")[0];
 let copyright = document.getElementById("copyright");
 
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-    let name = cname + "=";
-    let ca = document.cookie.split(';');
-
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
+function updateTheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.dataset.theme = "dark";
+    } else {
+        html.dataset.theme = "light";
     }
-    return "";
 }
 
-function getWidth() {
-    return Math.max(
-        document.body.scrollWidth,
-        document.documentElement.scrollWidth,
-        document.body.offsetWidth,
-        document.documentElement.offsetWidth,
-        document.documentElement.clientWidth
-    );
-}
-
-function scrollToElement() {
-    const params = new URLSearchParams(window.location.search);
-
-    const elementID = params.get("id");
-
-    if (elementID === null) {
-        return; // No element to scroll to
+function setupNavbar() {
+    if (nav === null) {
+        throw new Error("Navbar not found");
     }
 
-    const elementY = window.scrollY + document.getElementById(elementID).getBoundingClientRect().top;
+    for (let i = 0; i < NAV_LINKS.length; i++) {
+        let link = NAV_LINKS[i];
 
-    window.scrollTo(0, getWidth() < 1000 ? elementY : elementY - navbar.offsetHeight);
+        let li = document.createElement("li");
+        let a = document.createElement("a");
+
+        a.href = link.url;
+        a.innerText = link.name;
+
+        if (link.url == URL_PARSED.pathname) {
+            a.id = "current";
+        }
+
+        li.appendChild(a);
+        nav_links.appendChild(li);
+    }
 }
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    updateTheme();
+});
 
 window.addEventListener("load", function () {
-    let pageDomain = window.location.hostname;
-
-    if (pageDomain != "localhost" && (pageDomain != "warp-racing.com")) {
-        this.window.location.href = "https://warp-racing.com";
+    if (URL_PARSED.pathname.endsWith("/index.html")) {
+        window.location.replace(URL_PARSED.origin);
     }
 
     copyright.innerHTML = copyright.innerHTML.replace("{current_year}", new Date().getFullYear());
 
-    let cookieConsent = getCookie('cookieConsent');
-
-    if (cookieConsent === 'true') {
-        cookieConsentBanner.style.display = 'none';
-
-        const head = document.getElementsByTagName('head')[0];
-
-        let script = document.createElement("script");
-        script.src = "https://www.googletagmanager.com/gtag/js?id=G-T4H3H4C6PF"
-
-        head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments) };
-
-        gtag('js', new Date());
-        gtag('config', 'G-T4H3H4C6PF');
-
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "hdjddzo6n4");
-    } else if (cookieConsent == "") {
-        cookieConsentBanner.style.display = 'block';
-    }
-
-    scrollToElement();
-});
-
-acceptAllCookies.addEventListener('click', function () {
-    setCookie('cookieConsent', true, 365);
-    location.reload();
-});
-
-onlyFunctionalCookies.addEventListener('click', function () {
-    setCookie('cookieConsent', false, 365);
-    location.reload();
-});
+    updateTheme();
+    setupNavbar();
+})

@@ -1,11 +1,15 @@
+/* title-section */
+
+#title-section::before {
+    background-image: url(../../img/covers/index.jpg);
+}
+
 #title-section {
     display: flex;
-    align-items: center;
-    padding: 2rem 0rem 2rem 2rem;
+    flex-direction: row;
+
+    overflow: auto;
     position: relative;
-    overflow: hidden;
-    height: 100vh;
-    background-image: url(../../img/index.png);
 }
 
 #title {
@@ -14,121 +18,150 @@
 
 #title h1 {
     color: white;
-    font-size: 4rem;
-    margin-bottom: 1rem;
+    font-size: 5vh;
+    margin-bottom: 10px;
     display: block;
     padding-left: 10px;
     text-align: right;
 }
 
-.gradient-text {
-    background-image: linear-gradient(45deg, var(--accent-darker), var(--accent), #CA4246);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    background-size: 100%;
-    background-repeat: repeat;
-    font-weight: 600;
-}
-
 model-viewer {
     width: 50%;
     height: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#title #hover {
-    background: linear-gradient(to left, #4245A0 50%, #592087 50%) right;
-    background-size: 200%;
-    color: var(--opposite-text-color);
-    transition: .5s ease-out;
-}
-
-#title #hover:hover {
-    background-position: left;
-}
-
-#meet-the-team #card {
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    overflow: hidden;
-    width: 100%
-}
-
-#meet-the-team #card img {
-    height: auto;
-    object-fit: cover;
-    width: 100%
-}
-
-#members {
-    align-items: stretch;
-    column-gap: 2%;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 25px
-}
-
-#member,
-#members {
-    justify-content: center
-}
-
-#member {
-    align-items: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
-    display: inline-block;
-    flex-direction: column;
-    padding: 25px;
-    width: 49%
-}
-
-#member p#role {
-    font-size: 15px;
-    font-weight: 100;
-    margin-bottom: 5px
-}
-
-@media only screen and (max-width:1000px) {
-    #members {
-        flex-direction: column;
-        row-gap: 10px
-    }
-
-    #member {
-        width: 100%
-    }
-}
-
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     #title-section {
         flex-direction: column;
-        height: calc(100vh - 250px);
-        padding: 2rem;
     }
 
-    #title {
+    #title-section #title {
         width: 100%;
-    }
+        padding: 25px 10px;
 
-    #title h1 {
-        text-align: center;
-        display: block;
-        font-size: 3rem;
-        padding: 0px;
-    }
-
-    model-viewer {
-        width: 100%;
-        height: 50vh;
+        /* align in center vertically and horizontally */
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #title-section #title h1 {
+        text-align: center;
+        padding-right: 10px;
+    }
+
+    #title-section model-viewer {
+        width: 100%;
+    }
+}
+
+/* we-are-team-warp */
+
+#we-are-team-warp .left {
+    padding: 50px 10px 50px 0px;
+    width: 40%
+}
+
+#we-are-team-warp .left h2 {
+    text-align: right;
+}
+
+#we-are-team-warp .left .hover-colour {
+    color: white;
+}
+
+#we-are-team-warp .right {
+    padding: 50px 15px 50px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+    #we-are-team-warp .left {
+        padding-right: 50px;
+        width: 100%;
+    }
+
+    #we-are-team-warp .right {
+        padding: 0px 50px;
+    }
+}
+
+/* our-members */
+
+#our-members {
+    padding: 0px 50px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.card img {
+    width: 400px;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.2s;
+}
+
+.card img:hover {
+    transform: scale(1.01);
+}
+
+.card .card-text {
+    background-color: var(--accent-darker);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px 10px;
+
+    width: 400px;
+
+    transition: transform 0.2s;
+}
+
+.card .card-text:hover {
+    transform: translateY(-5px);
+}
+
+.card .card-text h3 {
+    text-decoration: underline;
+}
+
+.card .card-text h4 {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.card .card-text h3,
+.card .card-text h4,
+.card .card-text p {
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    #our-members {
+        padding: 25px 50px;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card .card-text {
+        width: 100%;
     }
 }
