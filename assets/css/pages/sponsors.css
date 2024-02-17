@@ -1,0 +1,78 @@
+#title-section::before {
+    background-image: url(../../img/covers/sponsors.jpg);
+    height: 500px;
+}
+
+#title-section {
+    height: 500px;
+}
+
+
+/* we-are-team-warp */
+
+#we-are-team-warp .left {
+    padding: 50px 10px 50px 0px;
+    width: 40%
+}
+
+#we-are-team-warp .left h2 {
+    text-align: right;
+}
+
+#we-are-team-warp .left .hover-colour {
+    color: white;
+}
+
+#we-are-team-warp .right {
+    padding: 50px 15px 50px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+    #we-are-team-warp .left {
+        padding-right: 50px;
+        width: 100%;
+    }
+
+    #we-are-team-warp .right {
+        padding: 0px 50px;
+    }
+}
+
+/* supported-by */
+
+#supported-by {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+#supported-by .sponsor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#supported-by .sponsor img {
+    width: 200px;
+    height: 100px;
+
+    transition: transform 0.3s;
+}
+
+#supported-by .sponsor img:hover {
+    transform: scale(1.1);
+}
+
+#supported-by .sponsor p {
+    font-size: 20px;
+    font-weight: 400;
+}

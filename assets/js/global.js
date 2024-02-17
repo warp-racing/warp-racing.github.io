@@ -1,7 +1,6 @@
 const NAV_LINKS = [
     { "name": "Home", "url": "/" },
     { "name": "Our Journey", "url": "/our-journey/" },
-    { "name": "Blog", "url": "/blog/" },
     { "name": "Sponsors", "url": "/sponsors/" },
     { "name": "Our Game", "url": "/our-game/" },
 ]

@@ -8,3 +8,7 @@ iframe {
         max-height: calc(100vh - var(--navbar-height-mobile))
     }
 }
+
+footer {
+    margin-top: 0px;
+}
