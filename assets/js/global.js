@@ -33,6 +33,7 @@ function setupNavbar() {
 
         a.href = link.url;
         a.innerText = link.name;
+        a.setAttribute("data-umami-event", `Navbar; ${link.name}`)
 
         if (link.url == URL_PARSED.pathname) {
             a.id = "current";
