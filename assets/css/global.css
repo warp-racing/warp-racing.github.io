@@ -41,6 +41,11 @@ html[data-theme="dark"] {
 body {
     background-color: var(--background-color);
     scroll-behavior: smooth;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 h2 {
