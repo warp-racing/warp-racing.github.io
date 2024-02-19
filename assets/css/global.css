@@ -48,9 +48,15 @@ body {
     justify-content: flex-start;
 }
 
+h1 {
+    overflow-wrap: anywhere;
+}
+
 h2 {
     font-size: 40px;
     font-weight: 600;
+
+    overflow-wrap: anywhere;
 }
 
 h3 {
@@ -156,6 +162,10 @@ p {
 @media (max-width: 1000px) {
     .cover {
         height: calc(100vh - var(--navbar-height-mobile));
+    }
+
+    .cover #cover-text h1#warp {
+        font-size: 50px;
     }
 }
 

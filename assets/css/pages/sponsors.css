@@ -51,11 +51,13 @@
     justify-content: center;
     align-items: center;
     gap: 25px;
+
+    margin-bottom: 10px;
 }
 
 #supported-by .sponsor {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
 }
