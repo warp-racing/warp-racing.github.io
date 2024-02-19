@@ -40,12 +40,12 @@
     float: right;
     height: auto;
     padding: 25px;
-    width: 50%
+    width: 50%;
 }
 
 #our-cars .car .car-about p {
     font-size: 17.5px;
-    padding: 100px 0
+    padding: 50px 0px;
 }
 
 @media only screen and (max-width:1150px) {
@@ -72,7 +72,7 @@
     #our-cars .car .car-about {
         display: block;
         float: none;
-        padding: 25px 10px 2.5px;
+        padding: 15px 10px;
         width: 100%
     }
 
