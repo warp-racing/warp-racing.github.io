@@ -1,10 +1,10 @@
 #title-section::before {
     background-image: url(../../img/covers/sponsors.jpg);
-    height: 500px;
+    min-height: 500px;
 }
 
 #title-section {
-    height: 500px;
+    min-height: 500px;
 }
 
 /* we-are-team-warp */
@@ -57,7 +57,7 @@
 
 #supported-by .sponsor {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

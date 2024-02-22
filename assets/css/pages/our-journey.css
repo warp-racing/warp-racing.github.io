@@ -1,10 +1,10 @@
 #title-section::before {
     background-image: url(../../img/covers/our-journey.jpg);
-    height: 500px;
+    min-height: 500px;
 }
 
 #title-section {
-    height: 500px;
+    min-height: 500px;
 }
 
 /* our-cars */
