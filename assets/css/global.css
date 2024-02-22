@@ -62,11 +62,15 @@ h2 {
 h3 {
     font-size: 20px;
     font-weight: 400;
+
+    overflow-wrap: anywhere;
 }
 
 h4 {
     font-size: 15px;
     font-weight: 300;
+
+    overflow-wrap: anywhere;
 }
 
 p {
@@ -74,6 +78,8 @@ p {
     font-weight: 300;
 
     text-align: justify;
+
+    overflow-wrap: anywhere;
 }
 
 @media (max-width: 500px) {
@@ -136,7 +142,7 @@ p {
 .cover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 
     align-items: center;
     justify-content: center;
@@ -161,7 +167,7 @@ p {
 
 @media (max-width: 1000px) {
     .cover {
-        height: calc(100vh - var(--navbar-height-mobile));
+        min-height: calc(100vh - var(--navbar-height-mobile));
     }
 
     .cover #cover-text h1#warp {
