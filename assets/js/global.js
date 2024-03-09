@@ -16,7 +16,7 @@ function updateTheme() {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         html.dataset.theme = "dark";
     } else {
-        html.dataset.theme = "light";
+        html.dataset.theme = "dark";
     }
 }
 

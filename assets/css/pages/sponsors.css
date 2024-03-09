@@ -85,3 +85,7 @@ html[data-theme="dark"] #supported-by .sponsor #aosom-logo {
 html[data-theme="dark"] #supported-by .sponsor #ansys-logo {
     content: url(../../img/sponsors/logo-ansys-dark.svg);
 }
+
+html[data-theme="dark"] #supported-by .sponsor #regent-logo {
+    content: url(../../img/sponsors/logo-ansys-regent.svg);
+}
