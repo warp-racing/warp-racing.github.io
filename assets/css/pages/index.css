@@ -58,6 +58,10 @@ model-viewer {
     #title-section model-viewer {
         width: 100%;
     }
+
+    #title-section model-viewer .ar-prompt {
+        display: inline-block;
+    }
 }
 
 /* we-are-team-warp */
