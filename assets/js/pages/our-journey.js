@@ -87,8 +87,8 @@ function preloadImage(url) {
 
 function preloadImages() {
     for (let i = 1; i <= 4; i++) {
-        preloadImage(`../../img/entry-class-car/${i}.webp`);
-        preloadImage(`../../img/dev-class-car/${i}.webp`);
+        preloadImage(`../assets/img/entry-class-car/${i}.webp`);
+        preloadImage(`../assets/img/dev-class-car/${i}.webp`);
     }
 }
 
