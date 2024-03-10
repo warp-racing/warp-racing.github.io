@@ -14,6 +14,9 @@ function moveCarousel_DevClass2024_LondonSouthRegionals() {
     /* add first item to the end */
 
     let copiedFirstItem = carouselFirstItem.cloneNode(true);
+    copiedFirstItem.onclick = function () {
+        window.open(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${carouselFirstItem.dataset.image}.jpg`, '_blank');
+    }
     imageCarouselDevClass2024_LondonSouthRegionals.appendChild(copiedFirstItem);
 
     /* move all items to the left */
@@ -59,6 +62,7 @@ function setupCarousel_DevClass2024_LondonSouthRegionals() {
         item.onclick = function () {
             window.open(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${i + 1}.jpg`, '_blank');
         }
+        item.dataset.image = i+1;
     }
     
     moveCarousel_DevClass2024_LondonSouthRegionals();
