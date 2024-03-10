@@ -112,12 +112,12 @@
 
 /* cache */
 
-cache {
+#cache {
     position: absolute;
     z-index: -1;
     opacity: 0;
 }
 
-cache image {
+#cache image {
     position: absolute;
 }
