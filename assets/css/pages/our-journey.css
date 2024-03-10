@@ -109,15 +109,3 @@
     height: 300px;
     width: auto;
 }
-
-/* cache */
-
-#cache {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-
-#cache image {
-    position: absolute;
-}

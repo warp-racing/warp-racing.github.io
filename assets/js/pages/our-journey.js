@@ -7,8 +7,6 @@ var carSlide = 0;
 
 const imageCarouselDevClass2024_LondonSouthRegionalsImages = 6;
 
-let cache = document.getElementById('cache');
-
 function moveCarousel_DevClass2024_LondonSouthRegionals() {
     let carouselFirstItem = imageCarouselDevClass2024_LondonSouthRegionals.firstElementChild;
     let firstItemWidth = carouselFirstItem.firstElementChild.width;
@@ -81,8 +79,6 @@ function preloadImage(url) {
     let img = new Image();
 
     img.src = url;
-
-    cache.appendChild(img);
 }
 
 function preloadImages() {
