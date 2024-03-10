@@ -84,3 +84,28 @@
         padding: 10px 0
     }
 }
+
+/* image-carousel */
+
+.image-carousel {
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.image-carousel .carousel-item {
+    display: inline-block;
+
+    height: 300px;
+}
+
+.image-carousel .carousel-item:hover {
+    cursor: pointer;
+}
+
+.image-carousel .carousel-item img {
+    height: 300px;
+    width: auto;
+}
