@@ -87,5 +87,5 @@ html[data-theme="dark"] #supported-by .sponsor #ansys-logo {
 }
 
 html[data-theme="dark"] #supported-by .sponsor #regent-logo {
-    content: url(../../img/sponsors/logo-ansys-regent.svg);
+    content: url(../../img/sponsors/logo-regent-dark.svg);
 }
