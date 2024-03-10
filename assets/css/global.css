@@ -126,7 +126,7 @@ p {
     z-index: -1;
 
     display: block;
-    background-image: url(../../img/covers/index.jpg);
+    background-image: url(../../img/covers/index.webp);
     background-size: cover;
     background-position: center;
     width: 100%;

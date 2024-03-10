@@ -1,7 +1,7 @@
 /* title-section */
 
 #title-section::before {
-    background-image: url(../../img/covers/index.jpg);
+    background-image: url(../../img/covers/index.webp);
 }
 
 #title-section {
