@@ -86,11 +86,11 @@ function preloadImages() {
         preloadImage(`../assets/img/entry-class-car/${i}.webp`);
         preloadImage(`../assets/img/dev-class-car/${i}.webp`);
 
-        preloadImage(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${i}.jpg`);
+        preloadImage(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${i}-small.png`);
     }
 
     for (let i = 5; i <= imageCarouselDevClass2024_LondonSouthRegionalsImages; i++) {
-        preloadImage(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${i}.jpg`);
+        preloadImage(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${i}-small.png`);
     }
 }
 
