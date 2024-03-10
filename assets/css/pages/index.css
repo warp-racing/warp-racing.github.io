@@ -34,6 +34,10 @@ model-viewer {
     align-items: center;
 }
 
+#title-section model-viewer #ar-prompt {
+    display: none;
+}
+
 @media (max-width: 1000px) {
     #title-section {
         flex-direction: column;
@@ -59,7 +63,7 @@ model-viewer {
         width: 100%;
     }
 
-    #title-section model-viewer .ar-prompt {
+    #title-section model-viewer #ar-prompt {
         display: inline-block;
     }
 }
