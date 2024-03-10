@@ -49,7 +49,7 @@ function setupCarousel_DevClass2024_LondonSouthRegionals() {
         div.classList.add('carousel-item');
         
         let img = document.createElement('img');
-        img.src = `../assets/img/our-journey/dev-class-2024_london-south-regionals/${i}-small.png`;
+        img.src = `../assets/img/our-journey/dev-class-2024_london-south-regionals/${i}-small.webp`;
         img.alt = `Dev Class 2024 London South Regionals ${i}`;
         
         div.appendChild(img);
@@ -90,11 +90,11 @@ function preloadImages() {
         preloadImage(`../assets/img/entry-class-car/${i}.webp`);
         preloadImage(`../assets/img/dev-class-car/${i}.webp`);
 
-        preloadImage(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${i}-small.png`);
+        preloadImage(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${i}-small.webp`);
     }
 
     for (let i = 5; i <= imageCarouselDevClass2024_LondonSouthRegionalsImages; i++) {
-        preloadImage(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${i}-small.png`);
+        preloadImage(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${i}-small.webp`);
     }
 }
 
