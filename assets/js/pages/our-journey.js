@@ -7,6 +7,8 @@ var carSlide = 0;
 
 const imageCarouselDevClass2024_LondonSouthRegionalsImages = 6;
 
+let cache = document.getElementById('cache');
+
 function moveCarousel_DevClass2024_LondonSouthRegionals() {
     let carouselFirstItem = imageCarouselDevClass2024_LondonSouthRegionals.firstElementChild;
     let firstItemWidth = carouselFirstItem.firstElementChild.width;
@@ -75,8 +77,24 @@ function changeCar() {
     setTimeout(changeCar, 5000);
 }
 
+function preloadImage(url) {
+    let img = new Image();
+
+    img.src = url;
+
+    cache.appendChild(img);
+}
+
+function preloadImages() {
+    for (let i = 1; i <= 4; i++) {
+        preloadImage(`../../img/entry-class-car/${i}.webp`);
+        preloadImage(`../../img/dev-class-car/${i}.webp`);
+    }
+}
+
 window.addEventListener("load", function () {
     setupCarousel_DevClass2024_LondonSouthRegionals();
 
+    preloadImages();
     changeCar();
 });
