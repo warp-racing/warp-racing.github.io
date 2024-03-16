@@ -11,14 +11,6 @@ function moveCarousel_DevClass2024_LondonSouthRegionals() {
     let carouselFirstItem = imageCarouselDevClass2024_LondonSouthRegionals.firstElementChild;
     let firstItemWidth = carouselFirstItem.firstElementChild.width;
 
-    /* add first item to the end */
-
-    let copiedFirstItem = carouselFirstItem.cloneNode(true);
-    copiedFirstItem.onclick = function () {
-        window.open(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${carouselFirstItem.dataset.image}.jpg`, '_blank');
-    }
-    imageCarouselDevClass2024_LondonSouthRegionals.appendChild(copiedFirstItem);
-
     /* move all items to the left */
 
     for (let i = 0; i < imageCarouselDevClass2024_LondonSouthRegionals.childElementCount; i++) {
@@ -36,13 +28,21 @@ function moveCarousel_DevClass2024_LondonSouthRegionals() {
             item.style.transition = `none`;
         }
 
+        /* add first item to the end */
+
+        let copiedFirstItem = carouselFirstItem.cloneNode(true);
+        copiedFirstItem.onclick = function () {
+            window.open(`../assets/img/our-journey/dev-class-2024_london-south-regionals/${carouselFirstItem.dataset.image}.jpg`, '_blank');
+        }
+        imageCarouselDevClass2024_LondonSouthRegionals.appendChild(copiedFirstItem);
+
         imageCarouselDevClass2024_LondonSouthRegionals.removeChild(carouselFirstItem);
 
         moveCarousel_DevClass2024_LondonSouthRegionals();
     }, 5000);
 }
 
-function setupCarousel_DevClass2024_LondonSouthRegionals() {
+async function setupCarousel_DevClass2024_LondonSouthRegionals() {
     for (let i = 2; i <= imageCarouselDevClass2024_LondonSouthRegionalsImages; i++) { /* we start from 2 and have 1 manually inputted because sometimes the browser glitches and returns 0 widths for newly appended elements. could never find a work around :`( */
         let div = document.createElement('div');
 
@@ -64,6 +64,8 @@ function setupCarousel_DevClass2024_LondonSouthRegionals() {
         }
         item.dataset.image = i+1;
     }
+
+    await new Promise(r => setTimeout(r, 5000));
     
     moveCarousel_DevClass2024_LondonSouthRegionals();
 }
@@ -99,8 +101,8 @@ function preloadImages() {
 }
 
 window.addEventListener("load", function () {
-    setupCarousel_DevClass2024_LondonSouthRegionals();
-
     preloadImages();
+
+    setupCarousel_DevClass2024_LondonSouthRegionals();
     changeCar();
 });
