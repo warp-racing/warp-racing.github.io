@@ -7,10 +7,10 @@ const NAV_LINKS = [
 const PAGE_URL = window.location.href;
 const URL_PARSED = new URL(PAGE_URL);
 
-let html = document.getElementsByTagName("html")[0];
-let nav = document.getElementsByTagName("nav")[0];
-let nav_links = nav.getElementsByTagName("ul")[0];
-let copyright = document.getElementById("copyright");
+var html;
+var nav;
+var nav_links;
+var copyright;
 
 function updateTheme() {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -49,12 +49,17 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 });
 
 window.addEventListener("load", function () {
+    html = document.getElementsByTagName("html")[0];
+    nav = document.getElementsByTagName("nav")[0];
+    nav_links = nav.getElementsByTagName("ul")[0];
+    copyright = document.getElementById("copyright");
+
     if (URL_PARSED.pathname.endsWith("/index.html")) {
         window.location.replace(URL_PARSED.origin);
     }
-
-    copyright.innerHTML = copyright.innerHTML.replace("{current_year}", new Date().getFullYear());
-
+    
     updateTheme();
     setupNavbar();
+
+    copyright.innerHTML = copyright.innerHTML.replace("{current_year}", new Date().getFullYear());
 })

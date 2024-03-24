@@ -1,14 +1,16 @@
-let entryClassCarImage = document.getElementById('entry-class-car-image');
-let devClassCarImage = document.getElementById('dev-class-car-image');
-let devClassCarImageNats = document.getElementById('dev-class-car-image-nats');
+var entryClassCarImage;
+var devClassCarImage;
+var devClassCarImageNats;
 
-let imageCarouselDevClass2024_LondonSouthRegionals = document.getElementById('image-carousel-dev-class-2024_london-south-regionals');
-let imageCarouselDevClass2024_UKNationals = document.getElementById('image-carousel-dev-class-2024_uk-nationals');
+var imageCarouselDevClass2024_LondonSouthRegionals;
+var imageCarouselDevClass2024_UKNationals;
 
 var carSlide = 0;
 
 const imageCarouselDevClass2024_LondonSouthRegionalsImages = 6;
 const imageCarouselDevClass2024_UKNationalsImages = 11;
+
+preloadImages();
 
 function moveCarousel_DevClass2024_LondonSouthRegionals() {
     let carouselFirstItem = imageCarouselDevClass2024_LondonSouthRegionals.firstElementChild;
@@ -149,7 +151,7 @@ function preloadImage(url) {
     img.src = url;
 }
 
-async function preloadImages() {
+function preloadImages() {
     for (let i = 1; i <= 4; i++) {
         preloadImage(`../assets/img/entry-class-car/${i}.webp`);
         preloadImage(`../assets/img/dev-class-car/${i}.webp`);
@@ -169,8 +171,13 @@ async function preloadImages() {
     }
 }
 
-window.addEventListener("load", async function () {
-    await preloadImages();
+window.addEventListener("load", function () {
+    entryClassCarImage = document.getElementById('entry-class-car-image');
+    devClassCarImage = document.getElementById('dev-class-car-image');
+    devClassCarImageNats = document.getElementById('dev-class-car-image-nats');
+
+    imageCarouselDevClass2024_LondonSouthRegionals = document.getElementById('image-carousel-dev-class-2024_london-south-regionals');
+    imageCarouselDevClass2024_UKNationals = document.getElementById('image-carousel-dev-class-2024_uk-nationals');
 
     setupCarousel_DevClass2024_LondonSouthRegionals();
     setupCarousel_DevClass2024_UKNationals();
