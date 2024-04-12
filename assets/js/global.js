@@ -2,7 +2,6 @@ const NAV_LINKS = [
     { "name": "Home", "url": "/" },
     { "name": "Our Journey", "url": "/our-journey/" },
     { "name": "Sponsors", "url": "/sponsors/" },
-    { "name": "Our Game", "url": "/our-game/" },
 ]
 const PAGE_URL = window.location.href;
 const URL_PARSED = new URL(PAGE_URL);
