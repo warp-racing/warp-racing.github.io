@@ -12,10 +12,6 @@ jobs:
   minify:
     runs-on: ubuntu-latest
 
-    permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
-      contents: write
-
     steps:
       - uses: actions/checkout@v4
         with:
@@ -25,6 +21,8 @@ jobs:
         uses: dra1ex/minify-action@v1.0.3
 
       - uses: stefanzweifel/git-auto-commit-action@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_SCOPED_TOKEN }}
         with:
           branch: minified
           create_branch: true
