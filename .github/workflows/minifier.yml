@@ -27,3 +27,4 @@ jobs:
           branch: minified
           create_branch: true
           commit_message: Apply minifications
+          repository: /src
