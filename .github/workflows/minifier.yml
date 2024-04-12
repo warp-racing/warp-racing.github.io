@@ -31,5 +31,4 @@ jobs:
 
           commit_user_name: skifli # defaults to "github-actions[bot]"
           commit_user_email: 121291719+skifli@users.noreply.github.com # defaults to "41898282+github-actions[bot]@users.noreply.github.com"
-          commit_author: Author <actions@github.com> # defaults to "username <username@users.noreply.github.com>", where "username" belongs to the author of the commit that triggered the run
 
