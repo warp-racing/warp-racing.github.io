@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  php-cs-fixer:
+  minify:
     runs-on: ubuntu-latest
 
     permissions:
