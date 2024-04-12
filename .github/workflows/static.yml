@@ -29,6 +29,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Fail if branch is not minified
+        if: github.event_name == 'workflow_dispatch' && github.ref != 'refs/heads/minified'
+        run: |
+          echo "This workflow should not be triggered with workflow_dispatch on a branch other than minified"
+          exit 1
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
