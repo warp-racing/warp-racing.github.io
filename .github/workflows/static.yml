@@ -4,8 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches:
-      - minified
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,20 +28,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Fail if branch is not minified
-        if: github.event_name == 'workflow_dispatch' && github.ref != 'refs/heads/minified'
-        run: |
-          echo "This workflow should not be triggered with workflow_dispatch on a branch other than minified"
-          exit 1
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Minify Action
+        uses: dra1ex/minify-action@v1.0.3
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: "."
+          path: './'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
