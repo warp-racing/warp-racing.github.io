@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/warprsob/public_html/
-    - /bin/cp -R * $DEPLOYPATH
